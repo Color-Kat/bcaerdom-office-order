@@ -44,29 +44,29 @@ class IndexController extends Controller
 
     public function index(Request $request)
     {
-        $data = Promises::Leftjoin("tax", "tax.id_tax", "premises.id_tax")
-            ->Leftjoin("types", "types.id_type", "premises.type_id")
-            ->where(["premises.id_typedeal" => 1, 'premises.isActive' => 'on'])
-            ->orderBy('premises.floor')
-            ->orderBy('premises.areaMax')
-            ->get();
 
-        $duo = 1;
+        $sign = Sign::where('id', 1)->first();
+        $sign_1 = Sign::where('id', 2)->first();
 
-        if ($data->count() == 0) {
-            $duo = 2;
-            $data = Promises::Leftjoin("tax", "tax.id_tax", "premises.id_tax")
+        if (!$sign->flag_sign)
+            $rentData = Promises::Leftjoin("tax", "tax.id_tax", "premises.id_tax")
+                ->Leftjoin("types", "types.id_type", "premises.type_id")
+                ->where(["premises.id_typedeal" => 1, 'premises.isActive' => 'on'])
+                ->orderBy('premises.floor')
+                ->orderBy('premises.areaMax')
+                ->get();
+        else $rentData = null;
+
+        if (!$sign_1->flag_sign)
+            $saleData = Promises::Leftjoin("tax", "tax.id_tax", "premises.id_tax")
                 ->Leftjoin("types", "types.id_type", "premises.type_id")
                 ->where(["premises.id_typedeal" => 2, 'premises.isActive' => 'on'])
                 ->orderBy('premises.floor')
                 ->orderBy('premises.areaMax')
                 ->get();
-        }
+        else $saleData = null;
 
-        $sign = Sign::where('id', 1)->first();
-        $sign_1 = Sign::where('id', 2)->first();
-
-        return view('index', compact('sign', 'sign_1', 'data', 'duo'));
+        return view('index', compact('sign', 'sign_1', 'rentData', 'saleData'));
     }
 
     public function blockrentid(Request $request)

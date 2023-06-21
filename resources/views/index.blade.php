@@ -97,24 +97,18 @@
     </section>
 
 
+    <!-- FREE RENT AREAS -->
+    @if($rentData)
+        <div
+            class="free-areas-in-rent-section default-page default-section default-section_gray-bg objects-table objects-table_rent JS-obects-table JS-obects-table_rent block"
+        >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
 
-    <!-- FREE AREAS -->
-    <div
-        class="free-areas-in-rent-section default-page default-section default-section_gray-bg objects-table objects-table_rent JS-obects-table JS-obects-table_rent block">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-
-
-                    @if ($duo == 1)
                         <h2>Свободные площади в аренду</h2>
-                    @else
-                        <h2>Свободные площади на продажу</h2>
-                    @endif
 
-                    <div class="default-content-block block">
-
-                        @if ($duo == 1)
+                        <div class="default-content-block block">
                             <table class="default-table default-table_closed default-table_JS">
                                 <thead class="default-table__thead">
                                 <tr>
@@ -127,9 +121,13 @@
                                 </tr>
                                 </thead>
                                 <tbody class="default-table__tbody desctop">
-                                @foreach($data as $d)
-                                    <tr data-href="/block/rent/{{$d->crmId}}" href="/block/rent/{{$d->crmId}}"
-                                        data-block-id="{{$d->crmId}}" data-block-type="rent">
+                                @foreach($rentData as $d)
+                                    <tr
+                                        data-href="/block/rent/{{$d->crmId}}"
+                                        href="/block/rent/{{$d->crmId}}"
+                                        data-block-id="{{$d->crmId}}"
+                                        data-block-type="rent"
+                                    >
                                         <td>
                                             <a href="/block/rent/{{$d->crmId}}">
                                                 {{$d->floor}} этаж
@@ -174,8 +172,6 @@
                                                         <span class='arendstavka1'>{{ number_format((($d->price+$d->explprice+$d->explprice) / 12 * $d->areaMax), 0, '', ' ') }} руб.</span>
                                                     @endif
                                                 @endif
-
-
                                             </a>
                                         </td>
                                         <td>
@@ -187,11 +183,31 @@
 
                                 @endforeach
                                 </tbody>
-
-
                             </table>
 
-                        @else
+                            <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+    <!-- FREE RENT AREAS -->
+
+
+    <!-- FREE SELL AREAS -->
+    @if($saleData)
+
+        <div
+            class="free-areas-in-rent-section default-page default-section default-section_gray-bg objects-table objects-table_rent JS-obects-table JS-obects-table_rent block"
+        >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <h2>Свободные площади на продажу</h2>
+
+                        <div class="default-content-block block">
                             <table class="default-table default-table_closed default-table_JS">
                                 <thead class="default-table__thead">
                                 <tr>
@@ -204,9 +220,14 @@
                                 </tr>
                                 </thead>
                                 <tbody class="default-table__tbody desctop">
-                                @foreach($data as $d)
-                                    <tr data-href="/block/sale/{{$d->crmId}}" href="/block/sale/{{$d->crmId}}"
-                                        data-block-id="{{$d->crmId}}" data-block-type="sale">
+
+                                @foreach($saleData as $d)
+                                    <tr
+                                        data-href="/block/sale/{{$d->crmId}}"
+                                        href="/block/sale/{{$d->crmId}}"
+                                        data-block-id="{{$d->crmId}}"
+                                        data-block-type="sale"
+                                    >
                                         <td>
                                             <a href="/block/sale/{{$d->crmId}}">
                                                 {{$d->floor}} этаж
@@ -228,15 +249,15 @@
                                                 @if($d->price == -1)
                                                     Договорная
                                                 @else
-
-                                                    <span class='arendstavka2'>{{number_format($d->price, 0, '', ' ')}} руб.</span>
+                                                    <span class='arendstavka2'>
+                                                    {{number_format($d->price, 0, '', ' ')}} руб.
+                                                </span>
                                                 @endif
                                             </a>
                                         </td>
                                         <td>
                                             <a href="/block/sale/{{$d->crmId}}">
                                                 {{$d->name_tax}}
-
                                             </a>
                                         </td>
                                         <td>
@@ -265,20 +286,16 @@
                                     </tr>
                                 @endforeach
                                 </tbody>
-
                             </table>
 
-                        @endif
-
-                        <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
+                            <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
-    </div>
-    <!-- FREE AREAS -->
+    @endif
+    <!-- FREE SELL AREAS -->
 
     <!-- ADVANTAGES SECTION -->
     <section class="advantages-section default-section default-section_shadow-bottom block">
