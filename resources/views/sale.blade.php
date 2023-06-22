@@ -160,7 +160,7 @@
                         </table>
                         <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
                         <div class="small-contacts-block small-contacts-block_inline">
-                            <a href="tel:+74994900592" class="default-contact-phone">+7 (499) 490-05-92</a>
+                            <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">{{env('SETTINGS_PHONE')}}</a>
                             <a href="#" class="default-contact-call JS-get-call-popup-open">Обратный звонок</a>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                         помещений – открытая, площадь офисных блоков – от 220 м2.
                     </p>
                     <p>
-                        В целях покупки офиса в бизнес-центре «Аэродом» звоните нам по телефону +7 (499) 490-05-92 или
+                        В целях покупки офиса в бизнес-центре «Аэродом» звоните нам по телефону {{env('SETTINGS_PHONE')}} или
                         оставляйте заявку на нашем сайте.
                     </p>
                 </div>

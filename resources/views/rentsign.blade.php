@@ -199,7 +199,7 @@
 
                             </div>
                             <div class="small-contacts-block small-contacts-block_colored">
-                                <a href="tel:+74994900592" class="default-contact-phone">+7 (499) 490-05-92</a>
+                                <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">{{env('SETTINGS_PHONE')}}</a>
                                 <a href="#" class="default-contact-call JS-get-call-popup-open"
                                    @if ($data->areaMin != null && $data->areaMax != null)
                                        dataroistat='{{$data->areaMin}} - {{$data->areaMax}} м2'

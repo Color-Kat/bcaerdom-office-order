@@ -3,17 +3,14 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>@yield('title')</title>
-    <!-- JQUERY-->
-    {{--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>--}}
+
     <meta name="description" content="Аренда и продажа офисов класса А в бизнес-центре Аэродом на Севере Москвы.">
     <meta name="keywords" content="бц Аэродом, Ленинградский проспект, офис в Хорошевском районе">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>
-
-    {{--    <link href="/public/css/bootstrap.css" rel="stylesheet">--}}
-    {{--    <link href="/public/css/main.css" rel="stylesheet">--}}
 
     <!--<link href="public/css/custom.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>-->
@@ -37,6 +34,7 @@
 
 </head>
 <body>
+
 <!-- HEADER -->
 <header class="header block">
     <div class="container">
@@ -50,7 +48,7 @@
             <div class="col-md-3 col-sm-4 col-xs-12">
                 <a href="/" class="logo">
                     <div class="logo__left">
-                        <img src="/public/images/logo.png" alt="БЦ Аэродом">
+                        <img src="{{asset('images/logo.png')}}" alt="БЦ Аэродом">
                         <br>
                         <span>Аэродом</span>
                     </div>
@@ -60,55 +58,36 @@
             <div class="col-md-7 col-sm-1">
                 <nav class="navigation navigation_JS">
                     <ul class="header-menu">
-                        @if ($_SERVER['REQUEST_URI'] == '/')
-                            <li class="header-menu__link header-menu__link_active">
-                        @else
-                            <li class="header-menu__link">
-                                @endif
-                                <a href="/" itemprop="url">Главная</a>
+                        <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/') header-menu__link_active @endif">
+                            <a href="/" itemprop="url">Главная</a>
+                        </li>
+
+                        @if (isset($sign) && $sign->flag_header != 1)
+                            <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/rent') header-menu__link_active @endif">
+                                <a href="/rent" itemprop="url">Аренда офисов</a>
                             </li>
+                        @endif
 
-                            @if (isset($sign) && $sign->flag_header != 1)
-                                @if ($_SERVER['REQUEST_URI'] == '/rent')
-                                    <li class="header-menu__link header-menu__link_active">
-                                @else
-                                    <li class="header-menu__link">
-                                        @endif
-                                        <a href="/rent" itemprop="url">Аренда офисов</a>
-                                    </li>
-                                @endif
+                        @if (isset($sign_1) && $sign_1->flag_header != 1)
+                            <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/sale') header-menu__link_active @endif">
+                                <a href="/sale" itemprop="url">Продажа офисов</a>
+                            </li>
+                        @endif
 
-                                @if (isset($sign_1) && $sign_1->flag_header != 1)
-                                    @if ($_SERVER['REQUEST_URI'] == '/sale')
-                                        <li class="header-menu__link header-menu__link_active">
-                                    @else
-                                        <li class="header-menu__link">
-                                            @endif
-                                            <a href="/sale" itemprop="url">Продажа офисов</a>
-                                            @endif
-                                        </li>
+                        <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/about') header-menu__link_active @endif">
+                            <a href="/about" itemprop="url">О бизнес-центре</a>
+                        </li>
 
-                                        @if ($_SERVER['REQUEST_URI'] == '/about')
-                                            <li class="header-menu__link header-menu__link_active">
-                                        @else
-                                            <li class="header-menu__link">
-                                                @endif
-                                                <a href="/about" itemprop="url">О бизнес-центре</a>
-                                            </li>
-
-                                            @if ($_SERVER['REQUEST_URI'] == '/contacts')
-                                                <li class="header-menu__link header-menu__link_active">
-                                            @else
-                                                <li class="header-menu__link">
-                                                    @endif
-                                                    <a href="/contacts" itemprop="url">Контакты</a>
-                                                </li>
+                        <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/contacts') header-menu__link_active @endif">
+                            <a href="/contacts" itemprop="url">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
+
             <div class="col-md-2 col-sm-3 header__contacts">
                 <div class="small-contacts-block">
-                    <a href="tel:+74994900592" class="default-contact-phone">+7 (499) 490-05-92</a>
+                    <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">{{env('SETTINGS_PHONE')}}</a>
                     <a href="#" class="default-contact-call JS-get-call-popup-open">Обратный звонок</a>
                 </div>
             </div>
@@ -161,7 +140,7 @@
             </div>
             <div class="col-md-2 col-sm-5 footer__contacts">
                 <div class="small-contacts-block">
-                    <a href="tel:+74994900592" class="default-contact-phone">+7 (499) 490-05-92</a>
+                    <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">{{env('SETTINGS_PHONE')}}</a>
                     <a href="#" class="default-contact-call JS-get-call-popup-open">Обратный звонок</a>
 
                 </div>

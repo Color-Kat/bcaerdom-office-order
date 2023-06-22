@@ -36,7 +36,7 @@
                         <span class="default-single-contact-element__name">Телефон:</span>
                         <span class="default-single-contact-element__value"><i class="fa fa-phone"
                                                                                aria-hidden="true"></i> <a
-                                href="tel:+74994900592">+7 (499) 490-05-92</a> — отдел аренды</span>
+                                href="tel:{{env('SETTINGS_PHONE')}}">{{env('SETTINGS_PHONE')}}</a> — отдел аренды</span>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-4">
