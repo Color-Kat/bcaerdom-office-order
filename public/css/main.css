@@ -1221,7 +1221,7 @@ p {
   font-weight: 300;
   line-height: 1.4; }
   @media (min-width: 768px) {
-    
+
     .lead {
       font-size: 21px; } }
 
@@ -1384,7 +1384,7 @@ dd {
   clear: both; }
 
 @media (min-width: 768px) {
-     
+
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -1716,10 +1716,10 @@ pre {
      }
   .arendstavka1:after{
          content: '/мес.';
-     }   
+     }
      .arendstavka2:after{
          content: '/м²';
-     }  
+     }
 }
 
 @media (min-width: 768px) {
@@ -8444,7 +8444,7 @@ button.close {
   box-sizing: border-box;
   font-family: 'Proxima Nova';
   /*font-weight: 300;*/
-    
+
 }
 
 .block {
@@ -9063,7 +9063,7 @@ a.default-dashed-link {
   float: left;
   padding: 20px;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: auto; }
   .default-popup__aligner.default-popup__aligner_flex {
     display: flex;
     justify-content: center;

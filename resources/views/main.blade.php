@@ -94,6 +94,7 @@
         </div>
     </div>
 </header>
+
 @yield('content')
 
 <!-- FOOTER -->
@@ -150,11 +151,16 @@
             <div class="col-md-12">
                 <nav class="navigation navigation_footer">
                     <ul class="header-menu">
-                        <li class="header-menu__link"><a href="/politica">Политика обработки персональных данных</a>
+                        <li class="header-menu__link">
+                            <a href="/politica">Политика обработки персональных данных</a>
                         </li>
-                        <li class="header-menu__link"><a href="/usersogl">Пользовательское соглашение</a></li>
+
+                        <li class="header-menu__link">
+                            <a href="/usersogl">Пользовательское соглашение</a>
+                        </li>
                     </ul>
                 </nav>
+
                 <p class="footer__copy">&copy; 2023 БЦ АЭРОДОМ. Все права защищены</p>
 
                 <div id="counter">
@@ -189,20 +195,34 @@
                 <i class="icon icon-close"></i>
             </a>
 
-
             <h3>Заказать обратный<br>звонок</h3>
+
             <div class="modalcontent">
                 <form action="/ajax/send-mail" method="post">
-                    <input type="text" name="name" class="default-input" id="namesend" placeholder="Имя"
-                           required="required">
-                    <input type="text" name="telephon" class="default-input phone-mask" id="emailsend"
-                           placeholder="Телефон"
-                           required="required">
+                    <input
+                        type="text"
+                        name="name"
+                        class="default-input"
+                        id="namesend"
+                        placeholder="Имя"
+                        required="required"
+                    >
+
+                    <input
+                        type="text" name="telephon"
+                        class="default-input phone-mask"
+                        id="emailsend"
+                        placeholder="Телефон"
+                        required="required"
+                    >
+
                     <input type="hidden" name='area' value='0' class="area"/>
                     <input type="hidden" name='crmId' value='0' class="crmId"/>
                     <input type="hidden" name='typedeal' value='0' class="typedeal"/>
-                    <div><input type="checkbox" required> Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой
-                            обработки персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
+
+                    <div>
+                        <input type="checkbox" required>
+                        Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
                     </div>
                     <br/>
                     <button class="blue-button">Отправить<i class="icon icon-arrow-right-white"></i>
