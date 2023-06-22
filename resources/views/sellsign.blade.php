@@ -35,12 +35,16 @@
                     </div>
                 </div>
             </div>
+
             <div class="popup-window__slider default-gallery-slider default-gallery-slider_JS">
                 @foreach($gals as $g)
-                    <div class="default-gallery-slider__cover"
-                         style="background-image: url('/public/images/gallery/{{$g->image}}')"></div>
+                    <div
+                        class="default-gallery-slider__cover"
+                        style="background-image: url('/public/images/gallery/{{$g->image}}')"
+                    ></div>
                 @endforeach
             </div>
+
             <div class="container">
                 <div class="popup-window__content">
                     <div class="row">
@@ -48,8 +52,7 @@
                             <table class="characteristics-table">
                                 <tr>
                                     <td>Этаж:</td>
-                                    <td>
-                                        {{$data->floor}}                                               </td>
+                                    <td>{{$data->floor}}</td>
                                 </tr>
                                 <tr>
                                     <td>Арендуемая площадь:</td>
@@ -77,12 +80,19 @@
                         <div class="col-md-3 col-sm-4">
                             <div class="small-contacts-block small-contacts-block_colored"
                                  style="margin-bottom: 8px;padding: 15px;background: #32CD32">
-                                <a href="#" class="default-contact-call JS-get-call-popup-open whatsapp" data="whatsapp"
-                                   style="border: none; font-size: 16px">Получить презентацию в Whatsapp</a>
-
+                                <a
+                                    href="#"
+                                    class="default-contact-call JS-get-call-popup-open whatsapp"
+                                    data="whatsapp"
+                                    style="border: none; font-size: 16px"
+                                >
+                                    Получить презентацию в Whatsapp
+                                </a>
                             </div>
                             <div class="small-contacts-block small-contacts-block_colored">
-                                <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">{{env('SETTINGS_PHONE')}}</a>
+                                <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">
+                                    {{env('SETTINGS_PHONE')}}
+                                </a>
                                 <a href="#" class="default-contact-call JS-get-call-popup-open">Обратный звонок</a>
                             </div>
                         </div>

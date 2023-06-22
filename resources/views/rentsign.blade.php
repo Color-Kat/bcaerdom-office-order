@@ -47,7 +47,6 @@
                             @else
                                 Продажа
                             @endif
-                            офиса в БЦ Аэродом
                             офиса
 
                             @if ($data->areaMin != null && $data->areaMax != null)
@@ -65,7 +64,6 @@
                 @foreach($gals as $g)
                     <div class="default-gallery-slider__cover"
                          style="background-image: url('/public/images/gallery/{{$g->image}}')"></div>
-
                 @endforeach
             </div>
             <div class="container">
@@ -75,8 +73,7 @@
                             <table class="characteristics-table">
                                 <tr>
                                     <td>Этаж:</td>
-                                    <td>
-                                        {{$data->floor}}                                               </td>
+                                    <td>{{$data->floor}}</td>
                                 </tr>
                                 <tr>
                                     <td>Арендуемая площадь:</td>
@@ -107,12 +104,10 @@
                                                 {{ number_format(($data->price + $data->explprice), 0, '', ' ') }} руб.
                                                 за м<sup>2</sup> / год
                                             @endif
-
                                         @else
                                             @if($data->price == -1)
                                                 Договорная
                                             @else
-
                                                 {{number_format($data->price, 0, '', ' ')}} руб. за м<sup>2</sup>
                                             @endif
 
@@ -127,7 +122,6 @@
                                                 Договорная
                                             @else
                                                 @if ($data->areaMin != null && $data->areaMax != null)
-
                                                     {{ number_format((($data->price+$data->explprice+$data->explprice) / 12 * $data->areaMin), 0, '', ' ') }}
                                                     - {{ number_format((($data->price+$data->explprice+$data->explprice) / 12 * $data->areaMax), 0, '', ' ') }}
                                                     руб. / мес.
@@ -136,7 +130,6 @@
                                                     руб. / мес.
                                                 @endif
                                             @endif
-
                                         @else
                                             @if($data->price == -1)
                                                 Договорная
@@ -145,14 +138,10 @@
                                                     {{ number_format(($data->price * $data->areaMin), 0, '', ' ') }}
                                                     - {{ number_format(($data->price * $data->areaMax), 0, '', ' ') }}
                                                     руб.
-
                                                 @else
                                                     {{ number_format(($data->price * $data->areaMax), 0, '', ' ') }}руб.
-
                                                 @endif
-
                                             @endif
-
                                         @endif
                                     </td>
                                 </tr>
@@ -166,7 +155,6 @@
                                         @else
                                             <td>Договорная</td>
                                         @endif
-
                                     </tr>
                                 @endif
                                 <tr>
@@ -179,13 +167,18 @@
                         <div class="col-md-3 col-sm-4">
                             <div class="small-contacts-block small-contacts-block_colored"
                                  style="margin-bottom: 8px;padding: 15px;background: #32CD32">
-                                <a href="#" class="default-contact-call JS-get-call-popup-open whatsapp" data="whatsapp"
-                                   style="border: none; font-size: 16px"
-                                   @if ($data->areaMin != null && $data->areaMax != null)
-                                       dataroistat='{{$data->areaMin}}-{{$data->areaMax}} м2'
-                                   datacrmId='{{$data->crmId}}'
-                                   datatypedeal='@if ($data->id_typedeal == 1) Аренда @else Продажа @endif'>Получить
-                                    презентацию в Whatsapp</a>
+                                <a
+                                    href="#"
+                                    class="default-contact-call JS-get-call-popup-open whatsapp"
+                                    data="whatsapp"
+                                    style="border: none; font-size: 16px"
+                                    @if ($data->areaMin != null && $data->areaMax != null)
+                                        dataroistat='{{$data->areaMin}}-{{$data->areaMax}} м2'
+                                    datacrmId='{{$data->crmId}}'
+                                    datatypedeal='@if ($data->id_typedeal == 1) Аренда @else Продажа @endif'
+                                >
+                                    Получить презентацию в Whatsapp
+                                </a>
 
                                 @else
                                     dataroistat='{{$data->areaMax}} м2' datacrmId='{{$data->crmId}}'
@@ -193,19 +186,25 @@
                                         Аренда
                                     @else
                                         Продажа
-                                    @endif'>Получить презентацию в Whatsapp</a>
-
+                                    @endif'
+                                    >
+                                    Получить презентацию в Whatsapp
+                                    </a>
                                 @endif
-
                             </div>
+
                             <div class="small-contacts-block small-contacts-block_colored">
-                                <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">{{env('SETTINGS_PHONE')}}</a>
+                                <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">
+                                    {{env('SETTINGS_PHONE')}}
+                                </a>
+
                                 <a href="#" class="default-contact-call JS-get-call-popup-open"
                                    @if ($data->areaMin != null && $data->areaMax != null)
                                        dataroistat='{{$data->areaMin}} - {{$data->areaMax}} м2'
                                    datacrmId='{{$data->crmId}}'
-                                   datatypedeal='@if ($data->id_typedeal == 1) Аренда @else Продажа @endif'>Обратный
-                                    звонок</a>
+                                   datatypedeal='@if ($data->id_typedeal == 1) Аренда @else Продажа @endif'>
+                                    Обратный звонок
+                                </a>
 
                                 @else
                                     dataroistat='{{$data->areaMax}} м2' datacrmId='{{$data->crmId}}'
@@ -216,8 +215,6 @@
                                     @endif'>Обратный звонок</a>
 
                                 @endif
-
-
                             </div>
                         </div>
                     </div>
