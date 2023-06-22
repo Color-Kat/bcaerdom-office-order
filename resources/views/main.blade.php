@@ -31,7 +31,6 @@
         })(window, document, 'script', 'cloud.roistat.com', 'deaaddadea3ea46f61889be0950ce214');
     </script>
     <!-- Roistat Counter End -->
-
 </head>
 <body>
 
