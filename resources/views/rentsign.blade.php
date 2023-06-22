@@ -87,7 +87,6 @@
                                         @else
                                             {{number_format($data->areaMax, 0, '', ' ')}} м<sup>2</sup>
                                         @endif
-
                                     </td>
                                 </tr>
                                 <tr>

@@ -39,7 +39,6 @@
                 @foreach($gals as $g)
                     <div class="default-gallery-slider__cover"
                          style="background-image: url('/public/images/gallery/{{$g->image}}')"></div>
-
                 @endforeach
             </div>
             <div class="container">

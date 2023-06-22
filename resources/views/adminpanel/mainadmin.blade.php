@@ -65,7 +65,9 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="public/images/logo.png" alt="" /></a>
+                <a href="index.html">
+                    <img class="main-logo" src="public/images/logo.png" alt="" />
+                </a>
                 <strong><img src="public/images/logo.png" alt="" /></strong>
             </div>
 

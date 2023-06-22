@@ -259,7 +259,7 @@
 <script>
     const phoneInputs = document.querySelectorAll('.phone-mask');
     const maskOptions = {
-        mask: '+{7}(000)000-00-00'
+        mask: '+{7} (000) 000-00-00'
     };
 
     phoneInputs.forEach((input) => IMask(input, maskOptions));
