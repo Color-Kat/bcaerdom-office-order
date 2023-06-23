@@ -122,7 +122,7 @@
                                     <td>Состояние</td>
                                 </tr>
                                 </thead>
-                                <tbody class="default-table__tbody desctop">
+                                <tbody class="default-table__tbody">
                                 @foreach($rentData as $d)
                                     <tr
                                         data-href="/block/rent/{{$d->crmId}}"
@@ -185,7 +185,9 @@
                                 </tbody>
                             </table>
 
+                            @if(count($rentData) > 3)
                             <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -218,7 +220,7 @@
                                     <td>Состояние</td>
                                 </tr>
                                 </thead>
-                                <tbody class="default-table__tbody desctop">
+                                <tbody class="default-table__tbody">
 
                                 @foreach($saleData as $d)
                                     <tr
@@ -284,7 +286,9 @@
                                 </tbody>
                             </table>
 
+                            @if(count($saleData) > 3)
                             <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
+                            @endif
                         </div>
                     </div>
                 </div>

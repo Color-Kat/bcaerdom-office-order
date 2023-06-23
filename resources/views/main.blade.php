@@ -103,7 +103,7 @@
             <div class="col-md-3 col-sm-5">
                 <a href="#" class="logo logo_white">
                     <div class="logo__left">
-                        <img src="/public/images/logo-white.png" alt="Бизнес-центр Аэродом">
+                        <img src="{{asset('images/logo-white.png')}}" alt="Бизнес-центр Аэродом">
                         <br>
                         <span>Аэродом</span>
                     </div>
