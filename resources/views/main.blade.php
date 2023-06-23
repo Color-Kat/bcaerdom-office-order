@@ -6,8 +6,8 @@
 
     <title>@yield('title')</title>
 
-    <meta name="description" content="Аренда и продажа офисов класса А в бизнес-центре Аэродом на Севере Москвы.">
-    <meta name="keywords" content="бц Аэродом, Ленинградский проспект, офис в Хорошевском районе">
+    <meta name="description" content="Башня Федерация, Москва Сити, БЦ Федерация Восток, БЦ Федерация Запад, Небоскрёб Федерация">
+    <meta name="keywords" content="Башня Федерация, Москва Сити, БЦ Федерация Восток, БЦ Федерация Запад, Небоскрёб Федерация">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>
@@ -28,7 +28,7 @@
             js.src = p + h + u;
             var js2 = d.getElementsByTagName(s)[0];
             js2.parentNode.insertBefore(js, js2);
-        })(window, document, 'script', 'cloud.roistat.com', 'deaaddadea3ea46f61889be0950ce214');
+        })(window, document, 'script', 'cloud.roistat.com', '{{env('ROISTAT_SCRIPT_KEY')}}');
     </script>
     <!-- Roistat Counter End -->
 </head>
@@ -47,11 +47,11 @@
             <div class="col-md-3 col-sm-4 col-xs-12">
                 <a href="/" class="logo">
                     <div class="logo__left">
-                        <img src="{{asset('images/logo.png')}}" alt="БЦ Аэродом">
+                        <img src="{{asset('images/logo.png')}}" alt="БЦ Башня Федерация">
                         <br>
-                        <span>Аэродом</span>
+                        <span>Башня Федерация</span>
                     </div>
-                    <span class="logo__text">Современный<br>комплекс класса А</span>
+{{--                    <span class="logo__text">Современный<br>комплекс класса А</span>--}}
                 </a>
             </div>
             <div class="col-md-7 col-sm-1">
@@ -73,9 +73,9 @@
                             </li>
                         @endif
 
-                        <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/about') header-menu__link_active @endif">
-                            <a href="/about" itemprop="url">О бизнес-центре</a>
-                        </li>
+{{--                        <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/about') header-menu__link_active @endif">--}}
+{{--                            <a href="/about" itemprop="url">О бизнес-центре</a>--}}
+{{--                        </li>--}}
 
                         <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/contacts') header-menu__link_active @endif">
                             <a href="/contacts" itemprop="url">Контакты</a>
@@ -103,11 +103,11 @@
             <div class="col-md-3 col-sm-5">
                 <a href="#" class="logo logo_white">
                     <div class="logo__left">
-                        <img src="{{asset('images/logo-white.png')}}" alt="Бизнес-центр Аэродом">
+                        <img src="{{asset('images/logo-white.png')}}" alt="Бизнес-центр Башня Федерация">
                         <br>
-                        <span>Аэродом</span>
+                        <span>Башня Федерация</span>
                     </div>
-                    <span class="logo__text">Современный<br>комплекс класса А</span>
+{{--                    <span class="logo__text">Современный<br>комплекс класса А</span>--}}
                 </a>
             </div>
             <div class="col-md-7 col-sm-2">
@@ -128,9 +128,9 @@
                             </li>
                         @endif
 
-                        <li class="header-menu__link">
-                            <a href="/about">О бизнес-центре</a>
-                        </li>
+{{--                        <li class="header-menu__link">--}}
+{{--                            <a href="/about">О бизнес-центре</a>--}}
+{{--                        </li>--}}
                         <li class="header-menu__link">
                             <a href="/contacts">Контакты</a>
                         </li>
@@ -145,8 +145,6 @@
                 </div>
             </div>
         </div>
-
-
 
         <div class="row">
 
@@ -167,7 +165,7 @@
                     </ul>
                 </nav>
 
-                <p class="footer__copy">&copy; 2023 БЦ АЭРОДОМ. Все права защищены</p>
+                <p class="footer__copy">© 2023 БЦ Башня Федерация. Все права защищены</p>
 
                 <div id="counter">
                 </div>

@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Описание БЦ Аэродом. Инфраструктура, компании-арендаторы в Аэродоме')
+@section('title', 'Описание БЦ Башня Федерация. Инфраструктура, компании-арендаторы в Башне Федерация')
 @section('content')
     <div class="default-page block">
         <div class="container">
@@ -7,19 +7,19 @@
                 <div class="col-md-12">
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="БЦ Аэродом" href="/" class="">
-                                <span itemprop="title">БЦ Аэродом</span>
+                            <a itemprop="url" title="БЦ Башня Федерация" href="/" class="">
+                                <span itemprop="title">БЦ Башня Федерация</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="Купить офис в БЦ Аэродом" href="/sale" class="">
+                            <a itemprop="url" title="Купить офис в БЦ Башня Федерация" href="/sale" class="">
                                 @if ($data->id_typedeal == 1)
                                     Аренда
                                 @else
                                     Продажа
                                 @endif
-                                офиса в БЦ Аэродом
+                                офиса в БЦ Башня Федерация
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
@@ -55,7 +55,7 @@
                             @else
                                 {{number_format($data->areaMax, 0, '', ' ')}} м<sup>2</sup>
                             @endif
-                            в бизнес-центре Аэродом
+                            в бизнес-центре Башня Федерация
                         </h1>
                     </div>
                 </div>
@@ -213,7 +213,6 @@
                                     @else
                                         Продажа
                                     @endif'>Обратный звонок</a>
-
                                 @endif
                             </div>
                         </div>

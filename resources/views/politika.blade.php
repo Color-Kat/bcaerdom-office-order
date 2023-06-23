@@ -18,7 +18,7 @@
                     Закон о&nbsp;персональных данных) и&nbsp;определяет порядок обработки
                     персональных данных и&nbsp;меры по&nbsp;обеспечению безопасности персональных
                     данных, предпринимаемые <span class="link mark owner-name-field" id="owner-name-value"
-                                                  data-scroll-to="#owner-name-field">бизнес-центра Аэродом</span> (далее&nbsp;—
+                                                  data-scroll-to="#owner-name-field">бизнес-центра Башня Федерация</span> (далее&nbsp;—
                     Оператор).
                 </div>
                 <div class="ol">

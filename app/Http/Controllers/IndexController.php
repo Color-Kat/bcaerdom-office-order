@@ -597,7 +597,7 @@ class IndexController extends Controller
         if ($area == 0) {
             $roistatData = array(
                 'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
-                'key' => '8fbb4bb921aa2a01544fff95303eb43e',
+                'key' => env('ROISTAT_SCRIPT_KEY'),
                 'title' => $title,
                 'email' => $email,
                 'name' => $name,
@@ -613,7 +613,7 @@ class IndexController extends Controller
         } else {
             $roistatData = array(
                 'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
-                'key' => '8fbb4bb921aa2a01544fff95303eb43e',
+                'key' => env('ROISTAT_SCRIPT_KEY'),
                 'title' => $title,
                 'email' => $email,
                 'name' => $name,

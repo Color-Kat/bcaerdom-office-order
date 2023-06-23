@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Бизнес-центр Аэродом на Ленинградском проспекте в Москве')
+@section('title', 'Башня Федерация в Москва-Сити | продажа и аренда офисов от собственника')
 @section('content')
 
     <!-- HOME PAGE TOP SECTION -->
@@ -12,10 +12,10 @@
                 <div class="col-md-12">
                     <div class="home-top-section__wrapper">
                         <h1>
-                            Аэродом
+                            Башня Федерация
                             <span class="simple-description-block">
-                                <span>Лучший бизнес-центр</span><br>
-                                на Ленинградском проспекте
+                                <span>САМЫЙ ВЫСОКИЙ<br>НЕБОСКРЁБ</span><br>
+                                в Москва-Сити
                             </span>
                         </h1>
                         <span class="home-top-section-description">
@@ -39,28 +39,28 @@
             <div class="row open-hidden-text-wrapper open-hidden-text-wrapper_JS">
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        «Аэродом» – это высококлассный бизнес-центр 2014 года постройки с современной архитектурой и
-                        интерьером.
-                        Он расположен в престижном районе Москвы, в деловой части Ленинградского проспекта, недалеко от
-                        станции метро «Ходынское поле».
+                        МФК «Башня Федерация» входит в деловой комплекс Москва-сити и является самым высоким небоскрёбом
+                        России и Европы.
                     </p>
                     <p>
-                        По международной классификации зданий «Аэродом» принадлежит к категории «А», а это значит, что
-                        здесь согласно передовым тенденциям обеспечены все необходимые условия для организации
-                        максимально комфортной работы для арендаторов и владельцев офисов.
+                        Арендаторы и владельцы офисов предпочитают помещения в «Федерации» в первую очередь, потому что
+                        в ММДЦ «Москва-Сити» сосредоточено множество компаний представляющих различные сферы бизнеса,
+                        среди которых можно найти новых партнёров, а также, из-за транспортной доступности и развитой
+                        инфраструктуры.
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        В офисных помещениях выполнена качественная отделка, а благодаря панорамному остеклению здания
-                        бизнес-центра, они отлично инсолируемы.
-                        Общие характеристики, инфраструктура и транспортная доступность образуют комплекс преимуществ,
-                        который позволяет заявить, что аренда и покупка офиса в таком бизнес-центре станет отличным
-                        выбором для компаний, высоко ценящих комфорт и престиж.
+                        Дополнительным преимуществом являются, солидная входная группа и панорамные виды на Москву из
+                        большинства офисов. Состоит комплекс из двух башен «Восток» и «Запад» находящихся на одном
+                        стилобате. В стилобате расположены офисы и ритейл-зона. В ходе возведения небоскрёба было
+                        реализовано такое техническое решение, как размещение двух скоростных лифтов в одной шахте
+                        (система TWIN). При строительстве использовали бетон B90 повышенной прочности и стёкла,
+                        отражающие солнечную радиацию.
                     </p>
-                    <p>
-                        Бизнес-центр «Аэродом» не оставит равнодушными даже самых взыскательных арендаторов!
-                    </p>
+                    {{--                    <p>--}}
+                    {{--                        Бизнес-центр «Аэродом» не оставит равнодушными даже самых взыскательных арендаторов!--}}
+                    {{--                    </p>--}}
                 </div>
             </div>
             <div class="row">
@@ -69,7 +69,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">36 000 м²</span>
+                                    <span class="single-complex-num">443 000 м²</span>
                                     <span class="blue-decorated-text">общая площадь</span>
                                 </div>
                             </div>
@@ -81,13 +81,13 @@
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">13</span>
+                                    <span class="single-complex-num">97</span>
                                     <span class="blue-decorated-text">этажность здания</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">293</span>
+                                    <span class="single-complex-num">63</span>
                                     <span class="blue-decorated-text">парковка (м/м)</span>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@
                             </table>
 
                             @if(count($rentData) > 3)
-                            <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
+                                <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
                             @endif
                         </div>
                     </div>
@@ -287,7 +287,7 @@
                             </table>
 
                             @if(count($saleData) > 3)
-                            <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
+                                <a href="#" class="show-more-default-link show-more-default-link_JS">Показать еще</a>
                             @endif
                         </div>
                     </div>
@@ -311,7 +311,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-buildings advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Класс А</strong><br>Комфортный БЦ В CЗАО
+                            <strong>Класс А</strong><br>Комфортный БЦ В ЦАО
                         </span>
                     </div>
                 </div>
@@ -334,32 +334,32 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="advantage-card">
-                        <i class="icon icon-advantages-car advantage-card__icon"></i>
-                        <span class="advantage-card__text">
-                            <strong>Подземная парковка</strong><br>Более 1000 машиномест
-                        </span>
-                    </div>
-                </div>
+                {{--                <div class="col-md-4 col-sm-4 col-xs-6">--}}
+                {{--                    <div class="advantage-card">--}}
+                {{--                        <i class="icon icon-advantages-car advantage-card__icon"></i>--}}
+                {{--                        <span class="advantage-card__text">--}}
+                {{--                            <strong>Подземная парковка</strong><br>Более 1000 машиномест--}}
+                {{--                        </span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="advantage-card">
-                        <i class="icon icon-advantages-medal advantage-card__icon"></i>
-                        <span class="advantage-card__text">
-                            <strong>соотношение цена/качество</strong><br>Одни из лучших предложений в округе
-                        </span>
-                    </div>
-                </div>
+                {{--                <div class="col-md-4 col-sm-4 col-xs-6">--}}
+                {{--                    <div class="advantage-card">--}}
+                {{--                        <i class="icon icon-advantages-medal advantage-card__icon"></i>--}}
+                {{--                        <span class="advantage-card__text">--}}
+                {{--                            <strong>соотношение цена/качество</strong><br>Одни из лучших предложений в округе--}}
+                {{--                        </span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="advantage-card">
-                        <i class="icon icon-advantages-tree advantage-card__icon"></i>
-                        <span class="advantage-card__text">
-                            <strong>хорошая экология</strong><br>Рядом расположен парк
-                        </span>
-                    </div>
-                </div>
+                {{--                <div class="col-md-4 col-sm-4 col-xs-6">--}}
+                {{--                    <div class="advantage-card">--}}
+                {{--                        <i class="icon icon-advantages-tree advantage-card__icon"></i>--}}
+                {{--                        <span class="advantage-card__text">--}}
+                {{--                            <strong>хорошая экология</strong><br>Рядом расположен парк--}}
+                {{--                        </span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
             </div>
         </div>
@@ -376,16 +376,30 @@
         </div>
 
         <div class="default-gallery-slider default-gallery-slider_JS">
-            <div class="default-gallery-slider__cover"
-                 style="background-image: url({{asset('images/gallery/1.jpg')}});"></div>
-            <div class="default-gallery-slider__cover"
-                 style="background-image: url({{asset('images/gallery/2.jpg')}});"></div>
-            <div class="default-gallery-slider__cover"
-                 style="background-image: url({{asset('images/gallery/3.jpg')}});"></div>
-            <div class="default-gallery-slider__cover"
-                 style="background-image: url({{asset('images/gallery/4.jpg')}});"></div>
-            <div class="default-gallery-slider__cover"
-                 style="background-image: url({{asset('images/gallery/5.jpg')}});"></div>
+            <div
+                class="default-gallery-slider__cover"
+                style="background-image: url({{asset('images/gallery/1.jpg')}});"
+            ></div>
+
+            <div
+                class="default-gallery-slider__cover"
+                style="background-image: url({{asset('images/gallery/2.jpg')}});"
+            ></div>
+
+            <div
+                class="default-gallery-slider__cover"
+                style="background-image: url({{asset('images/gallery/3.jpg')}});"
+            ></div>
+
+            <div
+                class="default-gallery-slider__cover"
+                style="background-image: url({{asset('images/gallery/4.jpg')}});"
+            ></div>
+
+            <div
+                class="default-gallery-slider__cover"
+                style="background-image: url({{asset('images/gallery/5.jpg')}});"
+            ></div>
         </div>
     </section>
 
@@ -404,7 +418,7 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, Ленинградский проспект д. 37к7.</br>Бизнес-центр Аэродом.
+                            Москва, Пресненская набережная, 12</br>Башня Федерация
                         </address>
                     </div>
                 </div>
@@ -423,7 +437,7 @@
                         <span class="default-single-contact-element__name">E-mail:</span>
                         <span class="default-single-contact-element__value">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <a href="mailto:info@bcaerodom.ru">info@bcaerodom.ru</a>
+                            <a href="mailto:info@bcaerodom.ru">info@fed-tower.ru</a>
                         </span>
                     </div>
                 </div>
@@ -431,12 +445,14 @@
         </div>
 
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script
-                type="text/javascript"
-                charset="utf-8"
-                async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A63587560d3a77dd48ff463177b4e24497d2ff61035e40397b5a507c553eeeae7&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
-            ></script>
+{{--            <script--}}
+{{--                type="text/javascript"--}}
+{{--                charset="utf-8"--}}
+{{--                async--}}
+{{--                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A63587560d3a77dd48ff463177b4e24497d2ff61035e40397b5a507c553eeeae7&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"--}}
+{{--            ></script>--}}
+
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa0e32d6ad41a1805ab2f6926ec5673fb5b85754685fe79d4e99a3e1bf85d197e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">
@@ -490,7 +506,8 @@
 
                             <div>
                                 <input type="checkbox" required>
-                                Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
+                                Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки
+                                    персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
                             </div>
 
                             <br/>
@@ -511,56 +528,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Современный БЦ на Ленинградском проспекте</h2>
+                    <h2>Офисы в МФК Башня Федерация. Аренда и продажа коммерческих площадей и апартаментов</h2>
                 </div>
             </div>
             <div class="row open-hidden-text-wrapper open-hidden-text-wrapper_JS">
-                <div class="col-md-6 col-sm-6">
+                <div class="col-12" style="margin-bottom: 18px; padding: 0 15px">
                     <p>
-                        Бизнес-центр «Аэродом» располагается в районе «Динамо» по адресу Ленинградский проспект, дом 37,
-                        корпус 7.
-                        Это бизнес-центр класса «А», что свидетельствует о его престижности.
-                        Дизайн «Аэродома» выполнен в современном стиле, бизнес-центр оснащен передовыми техническими
-                        системами.
-                    </p>
-                    <p>
-                        Транспортная и пешая доступность «Аэродома» вполне удобны.
-                        Путь до станции метро «Динамо», ближайшей к бизнес-центру, составит около 18 минут (1,7 км), а
-                        непосредственная близость от ТТК и МКАД открывает удобные транспортные пути.
-                        Удобна доступность бизнес-центра как по пути из центра, так и из аэропорта «Шереметьево».
-                        Для арендаторов и их клиентов здесь имеются как уличная, так и многоуровневая подземная парковка
-                        вместимостью на 293 машиноместа.
-                    </p>
-                    <p>
-                        Бизнес-центр «Аэродом» – это 14-этажное панорамно остекленное здание 2014 года постройки.
-                        Его архитектура дополняется презентабельной дизайнерски оформленной входной группой.
-                        Как офисное пространство, так и зоны общего пользования оформлены по единому дизайн-проекту.
-                        Здесь предоставляются в аренду и доступны к продаже помещения открытой планировки как с готовым
-                        ремонтом, так и под отделку.
+                        Офисы в МФК Башня Федерация. Аренда и продажа коммерческих площадей и апартаментов Купить или снять офисы и апартаменты уже сейчас можно в обеих башнях. Предложения от собственников офисных этажей и апартаментов смотрите в разделах аренда и продажа. По всем вопросам оформления сделок, просмотров апартаментов и офисов, а также организации переговоров с собственниками Вы можете обращаться по номеру +7 (499) 653-67-22
                     </p>
                 </div>
+
                 <div class="col-md-6 col-sm-6">
+                    <h2>Башня «Запад»</h2>
+
                     <p>
-                        Площадь бизнес-центра составляет 36 000 м2.
-                        Эргономичное рабочее пространство создается фунциональной и эффективной планировкой этажей и
-                        современным оборудованием и теллекоммуникациями.
+                        В западной башне 62 этажа. С 1-го по 34 этаж – размещается офис банка ВТБ. С 35 по 47 офисы в аренду и на продажу, этажи 49 по 59 этаж отведены под апартаменты. На 61-этаже расположен фитнес-клуб «Небо», и ресторан Sixty на 62-м этаже.
                     </p>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <h2>Башня «Восток»</h2>
+
                     <p>
-                        Здание оборудовано восьмью лифтами производства компании «OTIS».
-                        В бизнес-центре проведены качественные современные технические и коммуникационные системы.
-                        Здесь функционирует полный противопожарный комплекс, системы видеонаблюдения, центральная
-                        система кондиционирования и приточно-вытяжная вентиляция.
-                    </p>
-                    <p>
-                        Инфраструктура в бизнес-центре «Аэродом» включает в себя места ожидания для посетителей, кафе
-                        для арендаторов, банкоматы и магазины.
-                    </p>
-                    <p>
-                        Стоимость аренды помещений в данном бизнес-центре соответствует классу здания и его
-                        месторасположению.
-                        В данном бизнес центре арендуют офисы и владеют помещениями отечественные и зарубежные компании.
-                        Аренда или покупка офиса здесь станет отличным выбором для тех компаний, которые ценят комфорт и
-                        престиж.
+                        В восточной башне 97 этажей. В здании есть офисы, Sky-офисы и апартаменты в аренду и на продажу. Также предусмотрен клубный этаж для владельцев апартаментов.
                     </p>
                 </div>
             </div>

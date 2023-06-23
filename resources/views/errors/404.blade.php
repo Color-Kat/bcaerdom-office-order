@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Описание БЦ Аэродом. Инфраструктура, компании-арендаторы в Аэродоме')
+@section('title', 'Описание БЦ Башня Федерация. Инфраструктура, компании-арендаторы в Башне Федерации')
 @section('content')
     <!-- DEFAULT PAGE -->
     <div class="default-page block">

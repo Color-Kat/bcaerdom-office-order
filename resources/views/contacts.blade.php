@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Контактная информация | Бизнес-центр Аэродом')
+@section('title', 'Контактная информация | Бизнес-центр Башня Федерация')
 @section('content')
 
     <!-- CONTACTS -->
@@ -9,16 +9,16 @@
                 <div class="col-md-12">
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="БЦ Аэродом" href="/" class="">
-                                <span itemprop="title">БЦ Аэродом</span>
+                            <a itemprop="url" title="БЦ Башня Федерация" href="/" class="">
+                                <span itemprop="title">БЦ Башня Федерация</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
                         <li class="bread-crumbs__link bread-crumbs__link_current">
-                            Контактная информация | Бизнес-центр Аэродом
+                            Контактная информация | Бизнес-центр Башня Федерация
                         </li>
                     </ul>
-                    <h1>Контакты бизнес-центра Аэродом</h1>
+                    <h1>Контакты бизнес-центра Башня Федерация</h1>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, Ленинградский проспект д. 37к7.</br>Бизнес-центр Аэродом.
+                            Москва, Пресненская набережная, 12</br>Башня Федерация
                         </address>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                         <span class="default-single-contact-element__name">E-mail:</span>
                         <span class="default-single-contact-element__value">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <a href="mailto:info@bcaerodom.ru">info@bcaerodom.ru</a>
+                            <a href="mailto:info@bcaerodom.ru">info@fed-tower.ru</a>
                         </span>
                     </div>
                 </div>
@@ -55,12 +55,7 @@
 
         {{--    Map    --}}
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script
-                type="text/javascript"
-                charset="utf-8"
-                async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A63587560d3a77dd48ff463177b4e24497d2ff61035e40397b5a507c553eeeae7&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
-            ></script>
+             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa0e32d6ad41a1805ab2f6926ec5673fb5b85754685fe79d4e99a3e1bf85d197e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">
