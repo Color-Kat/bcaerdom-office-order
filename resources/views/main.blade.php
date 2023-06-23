@@ -142,13 +142,20 @@
                 <div class="small-contacts-block">
                     <a href="tel:{{env('SETTINGS_PHONE')}}" class="default-contact-phone">{{env('SETTINGS_PHONE')}}</a>
                     <a href="#" class="default-contact-call JS-get-call-popup-open">Обратный звонок</a>
-
                 </div>
             </div>
         </div>
+
+
+
         <div class="row">
+
+            <div class="col-12" style="color: #aaaaaa; padding: 16px 15px">
+                Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.
+            </div>
+
             <div class="col-md-12">
-                <nav class="navigation navigation_footer">
+                <nav class="navigation navigation_footer" style="padding-top: 0">
                     <ul class="header-menu">
                         <li class="header-menu__link">
                             <a href="/politica">Политика обработки персональных данных</a>
