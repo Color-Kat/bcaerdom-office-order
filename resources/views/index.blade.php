@@ -366,6 +366,7 @@
     </section>
 
     <!-- GALLERY -->
+    @if(env('SHOW_GALLERY'))
     <section class="gallery-section default-section default-section_gray-bg block">
         <div class="container">
             <div class="row">
@@ -402,7 +403,7 @@
             ></div>
         </div>
     </section>
-
+    @endif
 
     <!-- CONTACTS -->
     <section class="contacts-section default-section default-section_shadow-bottom block">

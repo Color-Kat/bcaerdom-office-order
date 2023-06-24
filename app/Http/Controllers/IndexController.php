@@ -584,20 +584,25 @@ class IndexController extends Controller
 
     public function senadmail(Request $request)
     {
+//        $site = $_SERVER['HTTP_X_FORWARDED_PROTO'] . '://' . $_SERVER['HTTP_HOST'] . '/';
+        $site = 'http' . '://' . $_SERVER['HTTP_HOST'] . '/';
+
         $name = $request->name;
         $email = $request->email;
         $area = $request->area;
-        $title = $request->title;
-        $comment = $request->comment;
+        $title = $request->title . ' - ' . $site;
         $phone = $request->phone;
         $crmId = $request->crmId;
         $typedeal = $request->typedeal;
 
-        $site = $_SERVER['HTTP_X_FORWARDED_PROTO'] . '://' . $_SERVER['HTTP_HOST'] . '/';
+        $commentAdditionalData = "\n\nofficeCrmId: $crmId, \nofficeSpace: $area, \ntypeDeal: $typedeal.";
+
+        $comment = $request->comment . $commentAdditionalData;
+
         if ($area == 0) {
             $roistatData = array(
                 'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
-                'key' => env('ROISTAT_SCRIPT_KEY'),
+                'key' => env('ROISTAT_SERVER_KEY'),
                 'title' => $title,
                 'email' => $email,
                 'name' => $name,
@@ -613,7 +618,7 @@ class IndexController extends Controller
         } else {
             $roistatData = array(
                 'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
-                'key' => env('ROISTAT_SCRIPT_KEY'),
+                'key' => env('ROISTAT_SERVER_KEY'),
                 'title' => $title,
                 'email' => $email,
                 'name' => $name,
