@@ -29,8 +29,10 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, Ленинградский проспект д. 15. <br>
-                            Бизнес-центр Большевик.
+                            Москва, Лесная улица, д. 5 <br>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Москва, Бутырский вал, д. 10 <br>
+                            Бизнес-центр Белая Площадь.
                         </address>
                     </div>
                 </div>
@@ -58,7 +60,7 @@
 
         {{--    Map    --}}
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae23a69aa7fdd01aa1050f1dd2e7937b360fdf305eae8176cce770f4406d8bf58&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32810550bc0decac2053a510809831e377c408b25ea16f0bfaffde194b88b16c&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">

@@ -6,8 +6,8 @@
 
     <title>@yield('title')</title>
 
-    <meta name="description" content="Аренда и продажа офисов класса А в БЦ Большевик на Севере Москвы.">
-    <meta name="keywords" content="бц Большевик, офис в Беговом районе">
+    <meta name="description" content="Аренда и продажа офисов класса А в бизнес-центре Белая Площадь в Центре Москвы.">
+    <meta name="keywords" content="бц Белая Площадь, Лесная улица, офис в Тверском районе">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>

@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Бизнес-центр Большевик на Севере Москвы')
+@section('title', 'Бизнес-центр Белая Площадь на Лесной улице в Москве')
 @section('content')
 
     <!-- HOME PAGE TOP SECTION -->
@@ -12,11 +12,11 @@
                 <div class="col-md-12">
                     <div class="home-top-section__wrapper">
                         <h1>
-                            БОЛЬШЕВИК
-                            {{--                            <span class="simple-description-block">--}}
-                            {{--                                <span>САМЫЙ ВЫСОКИЙ<br>НЕБОСКРЁБ</span><br>--}}
-                            {{--                                в Москва-Сити--}}
-                            {{--                            </span>--}}
+                            Белая Площадь
+                            <span class="simple-description-block">
+                                <span>ПРЕСТИЖНЫЙ<br>БИЗНЕС-ЦЕНТР</span><br>
+                                на Белорусской
+                            </span>
                         </h1>
                         <span class="home-top-section-description">
                             Современный многофункциональный комплекс класса А
@@ -39,16 +39,16 @@
             <div class="row open-hidden-text-wrapper open-hidden-text-wrapper_JS">
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        «Большевик» - это культурно-деловой комплекс класса А, выгодно расположенный на первой линии Ленинградского проспекта, в одном из наиболее динамичных районов Москвы, в районе с развитой деловой и торговой инфраструктурой. Это – уникальный проект, бизнес-пространство, обладающее большой исторической ценностью. Исторические здания кондитерской фабрики «Большевик», построенные из красного кирпича в середине 19-ого века, были отреставрированы и превращены в современный культурно-деловой комплекс международного уровня.
+                        БЦ Белая Площадь – современный многофункциональный комплекс. Деловой комплекс в Москве находится на пересечении двух крупных улиц – 1-й Тверской-Ямской и Бутырского Вала.
+                    </p>
+
+                    <p>
+                        По международной классификации зданий «Белая Площадь» принадлежит к категории «А». Здания соединяются пешеходными зонами.
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        Среди компаний, арендующих помещения в БЦ «Большевик» такие российские и международные организации, как «Publicis», «Leo Burnett», «Saatchi&Saatchi», «Starcom MediaVest», «VivaKi Media Exchange» и другие.
-                    </p>
-
-                    <p>
-                        Если Вы находитесь в поиске отличного места для организации своего рабочего пространства в Тверском районе Центрального административного округа Москвы, БЦ «Большевик», несомненно, станет для Вас превосходным выбором.
+                        В нескольких минутах ходьбы имеется станция московского метрополитена – Белорусская, а в 100 метрах расположен Белорусский вокзал, откуда можно легко добраться до аэропорта Шереметьево. Расположение БЦ Белая Площадь является наиболее оптимальным с точки зрения транспортной составляющей, центральный административный округ имеет отлично развитую сеть автодорог, поблизости много остановок общественного транспорта, удобные выезды на ТТК, Садовое кольцо и Ленинградский проспект.
                     </p>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">80 000 м²</span>
+                                    <span class="single-complex-num">74 000 м²</span>
                                     <span class="blue-decorated-text">общая площадь</span>
                                 </div>
                             </div>
@@ -70,13 +70,13 @@
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">6</span>
+                                    <span class="single-complex-num">15</span>
                                     <span class="blue-decorated-text">этажность здания</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">700</span>
+                                    <span class="single-complex-num">824</span>
                                     <span class="blue-decorated-text">парковка (м/м)</span>
                                 </div>
                             </div>
@@ -300,7 +300,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-buildings advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Класс А</strong><br>Комфортный БЦ в САО
+                            <strong>Класс А</strong><br>Комфортный БЦ в ЦАО
                         </span>
                     </div>
                 </div>
@@ -309,7 +309,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-train advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Транспортная доступность</strong><br>Всего 10 минут пешком от метро
+                            <strong>Транспортная доступность</strong><br>Всего 2 минуты пешком от метро
                         </span>
                     </div>
                 </div>
@@ -318,7 +318,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-view advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Офисы и апартаменты</strong><br> в одном комплексе
+                            <strong>Панорамные виды</strong><br> С верхних этаже здания
                         </span>
                     </div>
                 </div>
@@ -327,7 +327,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-car advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Парковка</strong><br>700 машиномест
+                            <strong>Подземная парковка </strong><br>С выходом во все три корпуса
                         </span>
                     </div>
                 </div>
@@ -396,50 +396,50 @@
                     style="background-image: url({{asset('images/gallery/6.jpg')}});"
                 ></div>
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/7.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/7.jpg')}});"--}}
+{{--                ></div>--}}
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/8.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/8.jpg')}});"--}}
+{{--                ></div>--}}
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/9.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/9.jpg')}});"--}}
+{{--                ></div>--}}
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/10.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/10.jpg')}});"--}}
+{{--                ></div>--}}
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/11.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/11.jpg')}});"--}}
+{{--                ></div>--}}
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/12.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/12.jpg')}});"--}}
+{{--                ></div>--}}
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/13.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/13.jpg')}});"--}}
+{{--                ></div>--}}
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/14.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/14.jpg')}});"--}}
+{{--                ></div>--}}
 
-                <div
-                    class="default-gallery-slider__cover"
-                    style="background-image: url({{asset('images/gallery/15.jpg')}});"
-                ></div>
+{{--                <div--}}
+{{--                    class="default-gallery-slider__cover"--}}
+{{--                    style="background-image: url({{asset('images/gallery/15.jpg')}});"--}}
+{{--                ></div>--}}
             </div>
         </section>
     @endif
@@ -458,8 +458,10 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, Ленинградский проспект д. 15. <br>
-                            Бизнес-центр Большевик.
+                            Москва, Лесная улица, д. 5 <br>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Москва, Бутырский вал, д. 10 <br>
+                            Бизнес-центр Белая Площадь.
                         </address>
                     </div>
                 </div>
@@ -486,7 +488,7 @@
         </div>
 
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae23a69aa7fdd01aa1050f1dd2e7937b360fdf305eae8176cce770f4406d8bf58&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32810550bc0decac2053a510809831e377c408b25ea16f0bfaffde194b88b16c&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">
@@ -562,31 +564,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Лофт-офисы в Москве в пределах ТТК</h2>
+                    <h2>Современный БЦ на Белорусской</h2>
                 </div>
             </div>
             <div class="row open-hidden-text-wrapper open-hidden-text-wrapper_JS">
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        «Большевик» – это крупный культурно-деловой комплекс, расположенный в Тверском районе Москвы по адресу Ленинградский проспект, дом 15, строение 1.
+                        БЦ Белая Площадь предлагает шикарные помещения с ультрасовременной отделкой. Для создания уникального интерьера использовались только качественные натуральные материалы, которые позволили создать неповторимый имидж престижа и высокой значимости. Идеально подобранная высота зданий, огромные окна и небольшая глубина этажей позволили создать пространства с максимально высоким естественным освещением.
                     </p>
 
                     <p>
-                        По международной классификации офисных зданий «Большевик» относится к классу «А». Данный комплекс обладает всеми необходимыми качествами, чтобы стать отличным выбором для Вас: выгодное месторасположение, престижность, качественное инженерно-техническое обеспечение, развитая инфраструктура. Реновация здания была произведена совсем недавно, в 2014 году. В процессе ее реализации были использованы качественные, экологически чистые материалы.
+                        Комплекс включает в себя три здания класса А общей площадью около 74 тысяч квадратных метров, проект реализован в 2009 году. Деловой центр имеет переменную этажность (6-15 уровней), подземная площадь составляет 30 тысяч квадратов.
                     </p>
 
                     <p>
-                        БЦ «Большевик» имеет такие награды, как MUF'17 Community Awards, Best Office Awards 2017, The Moscow Times Awards 2015, что в очередной раз свидетельствует о высоком уровне его престижности.
+                        Удобство для арендаторов представляет не только хорошая доступность комплекса, но и прекрасно развитая внутренняя инфраструктура. В центре имеются кафе и рестораны на любой вкус, где можно не только вкусно пообедать, но и провести деловую встречу.
                     </p>
                 </div>
 
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        В здании проведены все необходимые, современные инженерно-технические системы. Выгодное месторасположение обеспечивает высокую транспортную и пешую доступность. Ближайшая станция метро – «Белорусская» – располагается в 9 минутах ходьбы. Эффективная планировка этажей и офисное пространство в стиле «лофт» создают приятные условия для комфортной работы. Открытая планировка пространства и стильные интерьеры на территории исторического здания способствуют созданию хорошей рабочей, творческой атмосферы и повышению статуса компании в глазах клиентов и партнеров.
+                        Первые этажи деловых зданий заняты торговыми площадями, здесь же расположены отделения крупных банков. Оборудование и коммуникации зданий новейшие, здесь проведены современные системы вентилирования, установлены кондиционеры, имеется центральное отопление.
                     </p>
 
                     <p>
-                        Стоимость аренды помещений в бизнес-центре «Большевик» соответствует уровню предоставляемых услуг. Аренда или покупка офиса в таком здании станет отличным выбором для тех компаний, которые находятся в поиске офиса в Тверском районе и высоко ценят престиж и комфорт.
+                        Безопасность обеспечивается противопожарной сигнализацией и сплинкерной системой пожаротушения, а также круглосуточной охраной.
+                    </p>
+
+                    <p>
+                        На территории комплекса располагаются наземный паркинг и подземная трехуровневая автостоянка, вместимостью на 824 автомобиля. При этом имеется возможность с парковки попасть на любой этаж высоток посредством современных скоростных лифтов.
+                    </p>
+
+                    <p>
+                        Бизнес-центр Белая площадь – уникальное сочетание превосходного дизайна, необычной архитектуры и высокого комфорта, здесь есть все, что необходимо для ведения успешного бизнеса!
                     </p>
                 </div>
             </div>
