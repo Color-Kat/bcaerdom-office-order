@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Продажа офиса в бизнес-центре Алкон')
+@section('title', 'Продажа офисов в бизнес-центре Сильвер Сити')
 @section('content')
 
     <!-- DEFAULT PAGE -->
@@ -9,15 +9,15 @@
                 <div class="col-md-12">
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="БЦ Алкон" href="/" class="">
-                                <span itemprop="title">БЦ Алкон</span>
+                            <a itemprop="url" title="БЦ Сильвер Сити" href="/" class="">
+                                <span itemprop="title">БЦ Сильвер Сити</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
-                        <li class="bread-crumbs__link bread-crumbs__link_current">Купить офис в БЦ Алкон</li>
+                        <li class="bread-crumbs__link bread-crumbs__link_current">Купить офис в БЦ Сильвер Сити</li>
                     </ul>
 
-                    <h1>Продажа офисов в бизнес-центре Алкон</h1>
+                    <h1>Продажа офисов в бизнес-центре {{env('SETTINGS_BC_NAME')}}</h1>
 
                     <div class="default-content-block block">
                         <table class="default-table default-table_closed default-table_JS">
@@ -171,7 +171,15 @@
                     </div>
 
                     <p>
-                        Если Вас интересует покупка офиса в БЦ «Алкон», обращайтесь к нам по телефону или оставляйте заявку на нашем сайте.
+                        Покупка офиса в бизнес-центре «Silver City» станет отличным выбором для тех, кто хотел бы приобрести помещение в престижном офисном комплексе с развитой инфраструктурой и хорошей транспортной доступностью.
+                    </p>
+
+                    <p>
+                        В данном бизнес-центре предлагаются к покупке помещения кабинетной, смешанной и открытой планировки. Из окон офисов открывается великолепный вид на набережную реки Яуза. В оформлении зон общего пользования и холлов использованы высококлассные материалы.
+                    </p>
+
+                    <p>
+                        Площадь типового этажа здесь составляет 4 500 м<sup>2</sup>, высота потолков 2,75 м.
                     </p>
                 </div>
             </div>

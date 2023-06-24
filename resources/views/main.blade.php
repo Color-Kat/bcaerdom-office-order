@@ -6,8 +6,8 @@
 
     <title>@yield('title')</title>
 
-    <meta name="description" content="Аренда и продажа офисов класса А в бизнес-центре Алкон На Севере Москвы.">
-    <meta name="keywords" content="бц Алкон, Ленинградский проспект, офис в районе Аэропорт">
+    <meta name="description" content="Снять офис в БЦ Сильвер Сити. Свободные площади в аренду в Бизенес-центре Сильвер Сити на Серебрянической набережной д. 29.">
+    <meta name="keywords" content="бц Сильвер Сити, аренда на набережной">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>
@@ -47,7 +47,7 @@
             <div class="col-md-3 col-sm-4 col-xs-12">
                 <a href="/" class="logo">
                     <div class="logo__left">
-                        <img src="{{asset('images/logo.png')}}" alt="БЦ Алкон">
+                        <img src="{{asset('images/logo.png')}}" alt="БЦ {{env('SETTINGS_BC_NAME')}}">
                         <br>
                         <span>{{env('SETTINGS_BC_NAME')}}</span>
                     </div>
@@ -103,9 +103,9 @@
             <div class="col-md-3 col-sm-5">
                 <a href="#" class="logo logo_white">
                     <div class="logo__left">
-                        <img src="{{asset('images/logo-white.png')}}" alt="Бизнес-центр Алкон">
+                        <img src="{{asset('images/logo-white.png')}}" alt="Бизнес-центр {{env('SETTINGS_BC_NAME')}}">
                         <br>
-                        <span>Алкон</span>
+                        <span>{{env('SETTINGS_BC_NAME')}}</span>
                     </div>
                     <span class="logo__text">Современный<br>комплекс класса А</span>
                 </a>
@@ -135,7 +135,6 @@
                         <li class="header-menu__link">
                             <a href="/contacts">Контакты</a>
                         </li>
-
                     </ul>
                 </nav>
             </div>
@@ -166,7 +165,7 @@
                     </ul>
                 </nav>
 
-                <p class="footer__copy">© 2023 БЦ Алкон. Все права защищены</p>
+                <p class="footer__copy">© 2023 БЦ {{env('SETTINGS_BC_NAME')}}. Все права защищены</p>
 
                 <div id="counter">
                 </div>

@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Описание БЦ Алкон. Инфраструктура, компании-арендаторы в Алкон')
+@section('title', 'Продажа офиса в БЦ ' . env('SETTINGS_BC_NAME'))
 @section('content')
     <div class="default-page block">
         <div class="container">
@@ -7,14 +7,14 @@
                 <div class="col-md-12">
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="БЦ Алкон" href="/" class="">
-                                <span itemprop="title">БЦ Алкон</span>
+                            <a itemprop="url" title="БЦ {{env('SETTINGS_BC_NAME')}}" href="/" class="">
+                                <span itemprop="title">БЦ {{env('SETTINGS_BC_NAME')}}</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="Купить офис в БЦ Алкон" href="/sale" class="">
-                                Купить офис в БЦ Алкон
+                            <a itemprop="url" title="Купить офис в БЦ {{env('SETTINGS_BC_NAME')}}" href="/sale" class="">
+                                Купить офис в БЦ {{env('SETTINGS_BC_NAME')}}
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h1 class="popup-window__headline" style="font-weight: normal !important; font-size: 24px">
-                            Продажа офиса {{$data->areaMin}} <span> м<sup>2</sup></span> в бизнес-центре Алкон
+                            Продажа офиса {{$data->areaMin}} <span> м<sup>2</sup></span> в бизнес-центре {{env('SETTINGS_BC_NAME')}}
                         </h1>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Описание БЦ Алкон. Инфраструктура, компании-арендаторы в Алкон')
+@section('title', 'Аренда офиса в БЦ ' . env('SETTINGS_BC_NAME'))
 @section('content')
     <div class="default-page block">
         <div class="container">
@@ -7,19 +7,19 @@
                 <div class="col-md-12">
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="БЦ Алкон" href="/" class="">
-                                <span itemprop="title">Бизнес-центр Алкон</span>
+                            <a itemprop="url" title="БЦ {{env('SETTINGS_BC_NAME')}}" href="/" class="">
+                                <span itemprop="title">Бизнес-центр {{env('SETTINGS_BC_NAME')}}</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="Купить офис в БЦ Алкон" href="/sale" class="">
+                            <a itemprop="url" title="Купить офис в БЦ {{env('SETTINGS_BC_NAME')}}" href="/sale" class="">
                                 @if ($data->id_typedeal == 1)
                                     Аренда
                                 @else
                                     Продажа
                                 @endif
-                                офиса в БЦ Алкон
+                                офиса в БЦ {{env('SETTINGS_BC_NAME')}}
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
@@ -55,7 +55,7 @@
                             @else
                                 {{number_format($data->areaMax, 0, '', ' ')}} м<sup>2</sup>
                             @endif
-                            в бизнес-центре Алкон
+                            в бизнес-центре {{env('SETTINGS_BC_NAME')}}
                         </h1>
                     </div>
                 </div>

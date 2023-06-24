@@ -87,7 +87,7 @@ class IndexController extends Controller
         else
             $str .= number_format($data['areaMax'], 0, '', ' ');
 
-        $str .= ' <span> м<sup>2</sup></span> в бизнес-центре Алкон</span>
+        $str .= ' <span> м<sup>2</sup></span> в бизнес-центре ' . env('SETTINGS_BC_NAME') . '</span>
                             <div class="popup-window__slider default-gallery-slider default-gallery-slider_JS">';
 
         foreach ($images as $d) {
