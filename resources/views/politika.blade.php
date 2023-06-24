@@ -18,7 +18,7 @@
                     Закон о&nbsp;персональных данных) и&nbsp;определяет порядок обработки
                     персональных данных и&nbsp;меры по&nbsp;обеспечению безопасности персональных
                     данных, предпринимаемые <span class="link mark owner-name-field" id="owner-name-value"
-                                                  data-scroll-to="#owner-name-field">бизнес-центра Башня Федерация</span> (далее&nbsp;—
+                                                  data-scroll-to="#owner-name-field">бизнес-центра Алкон</span> (далее&nbsp;—
                     Оператор).
                 </div>
                 <div class="ol">
@@ -32,7 +32,7 @@
                         1.2. Настоящая политика Оператора в&nbsp;отношении обработки персональных
                         данных (далее&nbsp;— Политика) применяется ко&nbsp;всей информации,
                         которую Оператор может получить о&nbsp;посетителях веб-сайта <span
-                            class="link mark owner-site-url-field" data-scroll-to="#owner-site-url-field">http://bcaerodom.ru/</span>.
+                            class="link mark owner-site-url-field" data-scroll-to="#owner-site-url-field">{{env('SITE_URL')}}</span>.
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                         2.3. Веб-сайт&nbsp;— совокупность графических и&nbsp;информационных
                         материалов, а&nbsp;также программ для ЭВМ и&nbsp;баз данных, обеспечивающих
                         их&nbsp;доступность в&nbsp;сети интернет по&nbsp;сетевому адресу <span
-                            class="link mark owner-site-url-field" data-scroll-to="#owner-site-url-field">http://bcaerodom.ru/</span>.
+                            class="link mark owner-site-url-field" data-scroll-to="#owner-site-url-field">{{env('SITE_URL')}}</span>.
                     </div>
                     <div class="li">
                         2.4. Информационная система персональных данных&nbsp;— совокупность
@@ -88,7 +88,7 @@
                     <div class="li">2.8. Персональные данные&nbsp;— любая информация,
                         относящаяся прямо или косвенно к&nbsp;определенному или определяемому
                         Пользователю веб-сайта <span class="link mark owner-site-url-field"
-                                                     data-scroll-to="#owner-site-url-field">http://bcaerodom.ru/</span>.
+                                                     data-scroll-to="#owner-site-url-field">{{env('SITE_URL')}}</span>.
                     </div>
                     <div class="li">
                         2.9. Персональные данные, разрешенные субъектом персональных данных для
@@ -101,7 +101,7 @@
                     </div>
                     <div class="li">
                         2.10. Пользователь&nbsp;— любой посетитель веб-сайта <span
-                            class="link mark owner-site-url-field" data-scroll-to="#owner-site-url-field">http://bcaerodom.ru/</span>.
+                            class="link mark owner-site-url-field" data-scroll-to="#owner-site-url-field">{{env('SITE_URL')}}</span>.
                     </div>
                     <div class="li">
                         2.11. Предоставление персональных данных&nbsp;— действия, направленные
@@ -455,7 +455,7 @@
                         Пользователь может актуализировать их&nbsp;самостоятельно, путем направления
                         Оператору уведомление на&nbsp;адрес электронной почты Оператора <span
                             class="link mark owner-email-field"
-                            data-scroll-to="#owner-email-field">info@bcaerodom.ru</span>
+                            data-scroll-to="#owner-email-field">{{env('SETTINGS_EMAIL')}}</span>
                         с&nbsp;пометкой «Актуализация персональных данных».
                     </div>
                     <div class="li">
@@ -468,7 +468,7 @@
                         на&nbsp;обработку персональных данных, направив Оператору уведомление
                         посредством электронной почты на&nbsp;электронный адрес Оператора <span
                             class="link mark owner-email-field"
-                            data-scroll-to="#owner-email-field">info@bcaerodom.ru</span>
+                            data-scroll-to="#owner-email-field">{{env('SETTINGS_EMAIL')}}</span>
                         с&nbsp;пометкой «Отзыв согласия на&nbsp;обработку персональных
                         данных».
                     </div>
@@ -573,7 +573,7 @@
                         12.1. Пользователь может получить любые разъяснения по&nbsp;интересующим
                         вопросам, касающимся обработки его персональных данных, обратившись
                         к&nbsp;Оператору с&nbsp;помощью электронной почты <span class="link mark owner-email-field"
-                                                                                data-scroll-to="#owner-email-field">info@bcaerodom.ru</span>.
+                                                                                data-scroll-to="#owner-email-field">{{env('SETTINGS_EMAIL')}}</span>.
                     </div>
                     <div class="li">
                         12.2. В&nbsp;данном документе будут отражены любые изменения политики

@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Башня Федерация в Москва-Сити | продажа и аренда офисов от собственника')
+@section('title', 'Бизнес-центр Алкон на Ленинградском проспекте в Москве')
 @section('content')
 
     <!-- HOME PAGE TOP SECTION -->
@@ -12,11 +12,11 @@
                 <div class="col-md-12">
                     <div class="home-top-section__wrapper">
                         <h1>
-                            Башня Федерация
-                            <span class="simple-description-block">
-                                <span>САМЫЙ ВЫСОКИЙ<br>НЕБОСКРЁБ</span><br>
-                                в Москва-Сити
-                            </span>
+                            ALCON
+                            {{--                            <span class="simple-description-block">--}}
+                            {{--                                <span>САМЫЙ ВЫСОКИЙ<br>НЕБОСКРЁБ</span><br>--}}
+                            {{--                                в Москва-Сити--}}
+                            {{--                            </span>--}}
                         </h1>
                         <span class="home-top-section-description">
                             Современный многофункциональный комплекс класса А
@@ -39,27 +39,26 @@
             <div class="row open-hidden-text-wrapper open-hidden-text-wrapper_JS">
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        МФК «Башня Федерация» входит в деловой комплекс Москва-сити и является самым высоким небоскрёбом
-                        России и Европы.
+                        Бизнес-центр «Алкон» - это грандиозный многофункциональный комплекс 2013 года постройки с
+                        собственной высокоразвитой инфраструктурой, расположенный в престижном деловом районе Москвы на
+                        Ленинградском проспекте.
                     </p>
                     <p>
-                        Арендаторы и владельцы офисов предпочитают помещения в «Федерации» в первую очередь, потому что
-                        в ММДЦ «Москва-Сити» сосредоточено множество компаний представляющих различные сферы бизнеса,
-                        среди которых можно найти новых партнёров, а также, из-за транспортной доступности и развитой
-                        инфраструктуры.
+                        Согласно международной классификации зданий, МФК «Алкон» относится к категории «А», что
+                        свидетельствует о высоком качестве его инженерно-технологического и коммуникационного
+                        обеспечения.
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        Дополнительным преимуществом являются, солидная входная группа и панорамные виды на Москву из
-                        большинства офисов. Состоит комплекс из двух башен «Восток» и «Запад» находящихся на одном
-                        стилобате. В стилобате расположены офисы и ритейл-зона. В ходе возведения небоскрёба было
-                        реализовано такое техническое решение, как размещение двух скоростных лифтов в одной шахте
-                        (система TWIN). При строительстве использовали бетон B90 повышенной прочности и стёкла,
-                        отражающие солнечную радиацию.
+                        Комплекс преимуществ «Алкон» позволяет судить о нем как об одном из наиболее престижных
+                        бизнес-центров современной Москвы. В этом многофункциональном комплексе по максимуму обеспечены
+                        благоприятные условия для организации комфортной и эффективной работы компаний-арендаторов.
+                        Аренда и покупка офисных помещений в БЦ «Алкон» станет отличным выбором для компаний, которые
+                        хотели бы разместить свое представительство в комфортных условиях в престижном районе «Сокол».
                     </p>
                     {{--                    <p>--}}
-                    {{--                        Бизнес-центр «Аэродом» не оставит равнодушными даже самых взыскательных арендаторов!--}}
+                    {{--                        Бизнес-центр «Алкон» не оставит равнодушными даже самых взыскательных арендаторов!--}}
                     {{--                    </p>--}}
                 </div>
             </div>
@@ -69,7 +68,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">443 000 м²</span>
+                                    <span class="single-complex-num">102 000 м²</span>
                                     <span class="blue-decorated-text">общая площадь</span>
                                 </div>
                             </div>
@@ -81,13 +80,13 @@
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">97</span>
+                                    <span class="single-complex-num">11</span>
                                     <span class="blue-decorated-text">этажность здания</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">63</span>
+                                    <span class="single-complex-num">1016</span>
                                     <span class="blue-decorated-text">парковка (м/м)</span>
                                 </div>
                             </div>
@@ -311,7 +310,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-buildings advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Класс А</strong><br>Комфортный БЦ В ЦАО
+                            <strong>Класс А</strong><br>Комфортный БЦ в ЦАО
                         </span>
                     </div>
                 </div>
@@ -320,7 +319,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-train advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Транспортная доступность</strong><br>Всего 5 минут пешком от метро
+                            <strong>Транспортная доступность</strong><br>Всего 2 минуты пешком от метро
                         </span>
                     </div>
                 </div>
@@ -334,32 +333,32 @@
                     </div>
                 </div>
 
-                {{--                <div class="col-md-4 col-sm-4 col-xs-6">--}}
-                {{--                    <div class="advantage-card">--}}
-                {{--                        <i class="icon icon-advantages-car advantage-card__icon"></i>--}}
-                {{--                        <span class="advantage-card__text">--}}
-                {{--                            <strong>Подземная парковка</strong><br>Более 1000 машиномест--}}
-                {{--                        </span>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                    <div class="advantage-card">
+                        <i class="icon icon-advantages-car advantage-card__icon"></i>
+                        <span class="advantage-card__text">
+                            <strong>Подземная парковка</strong><br>С выходами во все три корпуса
+                        </span>
+                    </div>
+                </div>
 
-                {{--                <div class="col-md-4 col-sm-4 col-xs-6">--}}
-                {{--                    <div class="advantage-card">--}}
-                {{--                        <i class="icon icon-advantages-medal advantage-card__icon"></i>--}}
-                {{--                        <span class="advantage-card__text">--}}
-                {{--                            <strong>соотношение цена/качество</strong><br>Одни из лучших предложений в округе--}}
-                {{--                        </span>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                    <div class="advantage-card">
+                        <i class="icon icon-advantages-medal advantage-card__icon"></i>
+                        <span class="advantage-card__text">
+                            <strong>соотношение цена/качество</strong><br>Одни из лучших предложений в округе
+                        </span>
+                    </div>
+                </div>
 
-                {{--                <div class="col-md-4 col-sm-4 col-xs-6">--}}
-                {{--                    <div class="advantage-card">--}}
-                {{--                        <i class="icon icon-advantages-tree advantage-card__icon"></i>--}}
-                {{--                        <span class="advantage-card__text">--}}
-                {{--                            <strong>хорошая экология</strong><br>Рядом расположен парк--}}
-                {{--                        </span>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                    <div class="advantage-card">
+                        <i class="icon icon-advantages-tree advantage-card__icon"></i>
+                        <span class="advantage-card__text">
+                            <strong>хорошая экология</strong><br>В окрестностях расположено несколько парков
+                        </span>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -367,42 +366,67 @@
 
     <!-- GALLERY -->
     @if(env('SHOW_GALLERY'))
-    <section class="gallery-section default-section default-section_gray-bg block">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Фотогалерея</h2>
+        <section class="gallery-section default-section default-section_gray-bg block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Фотогалерея</h2>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="default-gallery-slider default-gallery-slider_JS">
-            <div
-                class="default-gallery-slider__cover"
-                style="background-image: url({{asset('images/gallery/1.jpg')}});"
-            ></div>
+            <div class="default-gallery-slider default-gallery-slider_JS">
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/1.jpg')}});"
+                ></div>
 
-            <div
-                class="default-gallery-slider__cover"
-                style="background-image: url({{asset('images/gallery/2.jpg')}});"
-            ></div>
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/2.jpg')}});"
+                ></div>
 
-            <div
-                class="default-gallery-slider__cover"
-                style="background-image: url({{asset('images/gallery/3.jpg')}});"
-            ></div>
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/3.jpg')}});"
+                ></div>
 
-            <div
-                class="default-gallery-slider__cover"
-                style="background-image: url({{asset('images/gallery/4.jpg')}});"
-            ></div>
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/4.jpg')}});"
+                ></div>
 
-            <div
-                class="default-gallery-slider__cover"
-                style="background-image: url({{asset('images/gallery/5.jpg')}});"
-            ></div>
-        </div>
-    </section>
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/5.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/6.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/7.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/8.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/9.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/10.jpg')}});"
+                ></div>
+            </div>
+        </section>
     @endif
 
     <!-- CONTACTS -->
@@ -419,7 +443,8 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, Пресненская набережная, 12</br>Башня Федерация
+                            Москва, Ленинградский проспект д. 72.</br>
+                            Бизнес-центр Алкон.
                         </address>
                     </div>
                 </div>
@@ -438,7 +463,7 @@
                         <span class="default-single-contact-element__name">E-mail:</span>
                         <span class="default-single-contact-element__value">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <a href="mailto:info@bcaerodom.ru">info@fed-tower.ru</a>
+                            <a href="mailto:{{env('SETTINGS_EMAIL')}}">{{env('SETTINGS_EMAIL')}}</a>
                         </span>
                     </div>
                 </div>
@@ -446,14 +471,7 @@
         </div>
 
         <div class="contacts-section__map" id="contacts-section__map_JS">
-{{--            <script--}}
-{{--                type="text/javascript"--}}
-{{--                charset="utf-8"--}}
-{{--                async--}}
-{{--                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A63587560d3a77dd48ff463177b4e24497d2ff61035e40397b5a507c553eeeae7&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"--}}
-{{--            ></script>--}}
-
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa0e32d6ad41a1805ab2f6926ec5673fb5b85754685fe79d4e99a3e1bf85d197e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae0d79ef379f0cc67f11353510b1258911ace3c59bfa9fafefff8f489932979dd&amp;width=100%25&amp;height=555&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">
@@ -529,29 +547,58 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Офисы в МФК Башня Федерация. Аренда и продажа коммерческих площадей и апартаментов</h2>
+                    <h2>Современный БЦ на Ленинградском проспекте</h2>
                 </div>
             </div>
             <div class="row open-hidden-text-wrapper open-hidden-text-wrapper_JS">
-                <div class="col-12" style="margin-bottom: 18px; padding: 0 15px">
+                <div class="col-md-6 col-sm-6">
                     <p>
-                        Офисы в МФК Башня Федерация. Аренда и продажа коммерческих площадей и апартаментов Купить или снять офисы и апартаменты уже сейчас можно в обеих башнях. Предложения от собственников офисных этажей и апартаментов смотрите в разделах аренда и продажа. По всем вопросам оформления сделок, просмотров апартаментов и офисов, а также организации переговоров с собственниками Вы можете обращаться по номеру +7 (499) 653-67-22
+                        Многофункциональный комплекс «Алкон» находится на полностью реконструированной территории завода «Изолятор». Адрес его расположения – Северо-Западный административный округ Москвы, район «Сокол», Ленинградский проспект, владение 72.
+                    </p>
+
+                    <p>«Алкон 1» состоит из 4 зданий, общая его площадь составляет 102 177 м2.:</p>
+
+                    <p>
+                        <ul>
+                            <li>Здание 1 «Лондон» насчитывает 8 этажей и составляет площадь 13 909 м2</li>
+                            <li>Здание 2 «Гонконг» - также 8-этажное здание, его площадь – 13 913 м2</li>
+                            <li>Здание 3 «Токио» - 11-этажное здание общей площадью 20 472 м2</li>
+                            <li>Здание 4 «Нью-Йорк» - здание из 11 этажей с общей площадью 20 469 м2</li>
+                        </ul>
+                    </p>
+
+                    <p>Транспортная и пешая доступность «Алкон» очень удобны.</p>
+
+                    <p>Ближайшая станция метро – «Сокол» - находится всего в семи минутах ходьбы (600 м).</p>
+
+                    <p>
+                        Здесь открывается непосредственный доступ к таким трассам, как Ленинградское шоссе, Третье транспортное кольцо и МКАД.
+                    </p>
+
+                    <p>
+                        Удобен проезд к центру Москвы. Также здесь осуществим прямой доступ к международному аэропорту «Шереметьево».
+                    </p>
+
+                    <p>
+                        Для арендаторов и их клиентов здесь предусмотрены удобные условия парковки: имеются как уличная, так и подземная двухуровневая парковка вместимостью на 1016 машиномест.
                     </p>
                 </div>
 
                 <div class="col-md-6 col-sm-6">
-                    <h2>Башня «Запад»</h2>
-
                     <p>
-                        В западной башне 62 этажа. С 1-го по 34 этаж – размещается офис банка ВТБ. С 35 по 47 офисы в аренду и на продажу, этажи 49 по 59 этаж отведены под апартаменты. На 61-этаже расположен фитнес-клуб «Небо», и ресторан Sixty на 62-м этаже.
+                        Площадь, занимаемая территорией данного многофункционального комплекса равна 2,4 Га. Его архитектура выполнена в сдержанном современном стиле с использованием панелей кирпичного цвета и панорамного остекления. Дополняется она презентабельной дизайнерски оформленной входной группой. Фасады украшены шикарными террасными ярусами. Деловой центр обогащен озелененными зонами отдыха для арендаторов и их клиентов. Как офисное пространство, так и зоны общего пользования оформлены по единому дизайн-проекту. Атриумы, спроектированные в центре каждого из зданий, обеспечивают отличную инсоляцию офисных помещений. Здесь предоставляются в аренду и доступны к продаже помещения открытой планировки как с готовым ремонтом, так и под отделку.
                     </p>
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-                    <h2>Башня «Восток»</h2>
 
                     <p>
-                        В восточной башне 97 этажей. В здании есть офисы, Sky-офисы и апартаменты в аренду и на продажу. Также предусмотрен клубный этаж для владельцев апартаментов.
+                        Здание оборудовано лифтами производства компании «Schindler». Бизнес-центр оснащен качественными современными техническими и коммуникационными системами. Безопасность обеспечивается полным противопожарным комплексом и системами круглосуточного видеонаблюдения. Комфортный микроклимат круглый год создается с помощью центральной системы кондиционирования и приточно-вытяжной вентиляцией.
+                    </p>
+
+                    <p>
+                        «Алкон» является одним из самых амбициозных проектов современной деловой Москвы. Комплекс зданий данного многофункционального комплекса являет собой как бы город в городе с собственной развитой инфраструктурой и единым дизайном.
+                    </p>
+
+                    <p>
+                        Стоимость аренды и покупки помещений в МФК «Алкон» соответствует классу его зданий. Аренда или покупка офиса здесь станет отличным выбором для тех компаний, которые ценят комфорт и престиж.
                     </p>
                 </div>
             </div>

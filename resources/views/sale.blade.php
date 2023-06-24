@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Продажа офиса в бизнес-центре Башня Федерация')
+@section('title', 'Продажа офиса в бизнес-центре Алкон')
 @section('content')
 
     <!-- DEFAULT PAGE -->
@@ -9,15 +9,15 @@
                 <div class="col-md-12">
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="БЦ Башня Федерация" href="/" class="">
-                                <span itemprop="title">БЦ Башня Федерация</span>
+                            <a itemprop="url" title="БЦ Алкон" href="/" class="">
+                                <span itemprop="title">БЦ Алкон</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
-                        <li class="bread-crumbs__link bread-crumbs__link_current">Купить офис в БЦ Башня Федерация</li>
+                        <li class="bread-crumbs__link bread-crumbs__link_current">Купить офис в БЦ Алкон</li>
                     </ul>
 
-                    <h1>Продажа офисов в бизнес-центре Башня Федерация</h1>
+                    <h1>Продажа офисов в бизнес-центре Алкон</h1>
 
                     <div class="default-content-block block">
                         <table class="default-table default-table_closed default-table_JS">
@@ -171,16 +171,7 @@
                     </div>
 
                     <p>
-                        <a href="https://of.ru/bc/bashnya-federatciya-vostok">Все актуальные предолжения по продаже офисов в Башне Федерация можно посмотреть тут.</a>
-                    </p>
-                    <p>
-                        У вас появилась уникальная возможность приобрести в собственность готовые блоки с ремонтом и свидетельством о собственности от 50 кв.м.
-                    </p>
-                    <p>
-                        Цена продажи офисов от 330 000 рублей за метр квадратный. Блоки предлагаются на 37 этаже в Башне Запад МФК "Башня Федерация".
-                    </p>
-                    <p>
-                        Информацию по форме проведения сделки и метражам Вы можете уточнить у менеджеров по продаже по телефону {{env('SETTINGS_PHONE')}}
+                        Если Вас интересует покупка офиса в БЦ «Алкон», обращайтесь к нам по телефону или оставляйте заявку на нашем сайте.
                     </p>
                 </div>
             </div>

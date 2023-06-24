@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Контактная информация | Бизнес-центр Башня Федерация')
+@section('title', 'Контактная информация | Бизнес-центр Алкон')
 @section('content')
 
     <!-- CONTACTS -->
@@ -9,29 +9,32 @@
                 <div class="col-md-12">
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="БЦ Башня Федерация" href="/" class="">
-                                <span itemprop="title">БЦ Башня Федерация</span>
+                            <a itemprop="url" title="БЦ Алкон" href="/" class="">
+                                <span itemprop="title">БЦ Алкон</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
                         <li class="bread-crumbs__link bread-crumbs__link_current">
-                            Контактная информация | Бизнес-центр Башня Федерация
+                            Контактная информация | Бизнес-центр Алкон
                         </li>
                     </ul>
-                    <h1>Контакты бизнес-центра Башня Федерация</h1>
+                    <h1>Контакты бизнес-центра Алкон</h1>
                 </div>
             </div>
 
             <div class="row">
+
                 <div class="col-md-5 col-sm-4">
                     <div class="default-single-contact-element">
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, Пресненская набережная, 12</br>Башня Федерация
+                            Москва, Ленинградский проспект д. 72.</br>
+                            Бизнес-центр Алкон.
                         </address>
                     </div>
                 </div>
+
                 <div class="col-md-4 col-sm-4">
                     <div class="default-single-contact-element">
                         <span class="default-single-contact-element__name">Телефон:</span>
@@ -46,7 +49,7 @@
                         <span class="default-single-contact-element__name">E-mail:</span>
                         <span class="default-single-contact-element__value">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <a href="mailto:info@bcaerodom.ru">info@fed-tower.ru</a>
+                            <a href="mailto:{{env('SETTINGS_EMAIL')}}">{{env('SETTINGS_EMAIL')}}</a>
                         </span>
                     </div>
                 </div>
@@ -55,7 +58,7 @@
 
         {{--    Map    --}}
         <div class="contacts-section__map" id="contacts-section__map_JS">
-             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa0e32d6ad41a1805ab2f6926ec5673fb5b85754685fe79d4e99a3e1bf85d197e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae0d79ef379f0cc67f11353510b1258911ace3c59bfa9fafefff8f489932979dd&amp;width=100%25&amp;height=555&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">
@@ -97,12 +100,13 @@
                                 name="comment"
                                 id="maincomment"
                                 style="float: none"
-                              placeholder="Сообщение"
+                                placeholder="Сообщение"
                             ></textarea>
 
                             <div>
                                 <input type="checkbox" required>
-                                Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
+                                Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки
+                                    персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
                             </div>
                             <br/>
                             <button class="blue-button">

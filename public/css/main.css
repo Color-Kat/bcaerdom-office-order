@@ -8699,11 +8699,11 @@ a.default-dashed-link {
     text-decoration: none; }
 
 .home-top-section {
-  height: 680px;
+  height: 540px;
   background-image: url(../images/home-top-section-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top; }
+  background-position: center; }
 
 .home-top-section__wrapper {
   width: 100%;

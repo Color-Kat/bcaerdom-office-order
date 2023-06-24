@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Описание БЦ Башня Федерация. Инфраструктура, компании-арендаторы в Башне Федерации')
+@section('title', '404 - Не найдено')
 @section('content')
     <!-- DEFAULT PAGE -->
     <div class="default-page block">
@@ -13,8 +13,5 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-
 @endsection
