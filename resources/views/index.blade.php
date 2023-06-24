@@ -471,7 +471,7 @@
         </div>
 
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae0d79ef379f0cc67f11353510b1258911ace3c59bfa9fafefff8f489932979dd&amp;width=100%25&amp;height=555&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae0d79ef379f0cc67f11353510b1258911ace3c59bfa9fafefff8f489932979dd&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">
