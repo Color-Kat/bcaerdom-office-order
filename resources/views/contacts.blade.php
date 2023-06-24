@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Контактная информация | Бизнес-центр Сильвер Сити')
+@section('title', 'Контактная информация | Бизнес-центр Северное Сияние')
 @section('content')
 
     <!-- CONTACTS -->
@@ -9,16 +9,16 @@
                 <div class="col-md-12">
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" title="БЦ Сильвер Сити" href="/" class="">
-                                <span itemprop="title">БЦ Сильвер Сити</span>
+                            <a itemprop="url" title="БЦ {{env('SETTINGS_BC_NAME')}}" href="/" class="">
+                                <span itemprop="title">БЦ {{env('SETTINGS_BC_NAME')}}</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
                         <li class="bread-crumbs__link bread-crumbs__link_current">
-                            Контактная информация | Бизнес-центр Сильвер Сити
+                            Контактная информация | Бизнес-центр {{env('SETTINGS_BC_NAME')}}
                         </li>
                     </ul>
-                    <h1>Контакты бизнес-центра Сильвер Сити</h1>
+                    <h1>Контакты бизнес-центра {{env('SETTINGS_BC_NAME')}}</h1>
                 </div>
             </div>
 
@@ -29,8 +29,8 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, Серебряническая набережная д. 29.</br>
-                            Бизнес-центр Сильвер Сити.
+                            Москва, улица Правды д. 26. <br>
+                            Бизнес-центр Северное Сияние.
                         </address>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
 
         {{--    Map    --}}
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae60ff082c5aa43f88996d5f7d14be5dfe46878aab00b15d5689a742fab8589eb&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af92b578cc9f2d013ee73d04b27e4274969c52705b71441a937197deb8766bfbe&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">

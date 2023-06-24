@@ -6,8 +6,8 @@
 
     <title>@yield('title')</title>
 
-    <meta name="description" content="Снять офис в БЦ Сильвер Сити. Свободные площади в аренду в Бизенес-центре Сильвер Сити на Серебрянической набережной д. 29.">
-    <meta name="keywords" content="бц Сильвер Сити, аренда на набережной">
+    <meta name="description" content="Аренда и продажа офисов класса А в БЦ Северное Сияние на Севере Москвы.">
+    <meta name="keywords" content="бц Северное Сияние, офис в Беговом районе">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>
@@ -51,7 +51,7 @@
                         <br>
                         <span>{{env('SETTINGS_BC_NAME')}}</span>
                     </div>
-                    <span class="logo__text">Современный<br>комплекс класса А</span>
+{{--                    <span class="logo__text">Современный<br>комплекс класса А</span>--}}
                 </a>
             </div>
             <div class="col-md-7 col-sm-1">
@@ -107,7 +107,7 @@
                         <br>
                         <span>{{env('SETTINGS_BC_NAME')}}</span>
                     </div>
-                    <span class="logo__text">Современный<br>комплекс класса А</span>
+{{--                    <span class="logo__text">Современный<br>комплекс класса А</span>--}}
                 </a>
             </div>
             <div class="col-md-7 col-sm-2">
@@ -116,6 +116,7 @@
                         <li class="header-menu__link header-menu__link_active">
                             <a href="/">Главная</a>
                         </li>
+
                         @if (isset($sign) && $sign->flag_footer != 1)
                             <li class="header-menu__link">
                                 <a href="/rent">Аренда офисов</a>
