@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Контактная информация | Бизнес-центр Северное Сияние')
+@section('title', 'Контактная информация | Бизнес-центр ' . env('SETTINGS_BC_NAME'))
 @section('content')
 
     <!-- CONTACTS -->
@@ -29,8 +29,8 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, улица Правды д. 26. <br>
-                            Бизнес-центр Северное Сияние.
+                            Москва, Ленинградский проспект д. 15. <br>
+                            Бизнес-центр Большевик.
                         </address>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
 
         {{--    Map    --}}
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af92b578cc9f2d013ee73d04b27e4274969c52705b71441a937197deb8766bfbe&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae23a69aa7fdd01aa1050f1dd2e7937b360fdf305eae8176cce770f4406d8bf58&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">

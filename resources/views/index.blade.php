@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Бизнес-центр Северное Сияние рядом с ТТК')
+@section('title', 'Бизнес-центр Большевик на Севере Москвы')
 @section('content')
 
     <!-- HOME PAGE TOP SECTION -->
@@ -12,7 +12,7 @@
                 <div class="col-md-12">
                     <div class="home-top-section__wrapper">
                         <h1>
-                            СЕВЕРНОЕ СИЯНИЕ
+                            БОЛЬШЕВИК
                             {{--                            <span class="simple-description-block">--}}
                             {{--                                <span>САМЫЙ ВЫСОКИЙ<br>НЕБОСКРЁБ</span><br>--}}
                             {{--                                в Москва-Сити--}}
@@ -39,20 +39,17 @@
             <div class="row open-hidden-text-wrapper open-hidden-text-wrapper_JS">
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        Бизнес-центр Северное Сияние представляет собой современный деловой комплекс с высокой функциональностью, относящийся к классу А.
-                    </p>
-                    <p>
-                        Пятнадцатиэтажный БЦ находится по адресу: г. Москва, САО, р-н Беговой, ул. Правды, д. 26, в пределах ТТК.
+                        «Большевик» - это культурно-деловой комплекс класса А, выгодно расположенный на первой линии Ленинградского проспекта, в одном из наиболее динамичных районов Москвы, в районе с развитой деловой и торговой инфраструктурой. Это – уникальный проект, бизнес-пространство, обладающее большой исторической ценностью. Исторические здания кондитерской фабрики «Большевик», построенные из красного кирпича в середине 19-ого века, были отреставрированы и превращены в современный культурно-деловой комплекс международного уровня.
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        Удобство местоположения обеспечивается отличной транспортной доступностью, рядом проходят крупные автомагистрали столицы, в шаговой доступности станция метро Савеловская. Офисный центр расположен в районе в отлично развитой инфраструктурой, рядом имеются медицинские учреждения и офисы крупных банков, рестораны и уютные кафе, парикмахерские, салоны красоты и торговые объекты.
+                        Среди компаний, арендующих помещения в БЦ «Большевик» такие российские и международные организации, как «Publicis», «Leo Burnett», «Saatchi&Saatchi», «Starcom MediaVest», «VivaKi Media Exchange» и другие.
                     </p>
 
-{{--                    <p>--}}
-{{--                        Вниманию потенциальных пользователей представлены помещения площадью от 340 квадратных метров со свободной и смешанной планировками, что позволяет арендовать объекты как крупным компаниям, так и владельцам небольшого бизнеса. Во всех блоках выполнена качественная отделка, а из окон открываются изумительные виды на Серебряническую набережную.--}}
-{{--                    </p>--}}
+                    <p>
+                        Если Вы находитесь в поиске отличного места для организации своего рабочего пространства в Тверском районе Центрального административного округа Москвы, БЦ «Большевик», несомненно, станет для Вас превосходным выбором.
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -61,7 +58,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">37 000 м²</span>
+                                    <span class="single-complex-num">80 000 м²</span>
                                     <span class="blue-decorated-text">общая площадь</span>
                                 </div>
                             </div>
@@ -73,13 +70,13 @@
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">15</span>
+                                    <span class="single-complex-num">6</span>
                                     <span class="blue-decorated-text">этажность здания</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6">
                                 <div class="complex-in-nums__single">
-                                    <span class="single-complex-num">307</span>
+                                    <span class="single-complex-num">700</span>
                                     <span class="blue-decorated-text">парковка (м/м)</span>
                                 </div>
                             </div>
@@ -303,7 +300,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-buildings advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Класс А</strong><br>Комфортный БЦ в ЦАО
+                            <strong>Класс А</strong><br>Комфортный БЦ в САО
                         </span>
                     </div>
                 </div>
@@ -312,7 +309,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-train advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Транспортная доступность</strong><br>Всего 2 минуты пешком от метро
+                            <strong>Транспортная доступность</strong><br>Всего 10 минут пешком от метро
                         </span>
                     </div>
                 </div>
@@ -321,7 +318,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-view advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Панорамные виды</strong><br> с верхних этажей бизнес-центра
+                            <strong>Офисы и апартаменты</strong><br> в одном комплексе
                         </span>
                     </div>
                 </div>
@@ -330,7 +327,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-car advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>Подземная парковка</strong><br>С выходами во все три корпуса
+                            <strong>Парковка</strong><br>700 машиномест
                         </span>
                     </div>
                 </div>
@@ -339,7 +336,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-medal advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>соотношение цена/качество</strong><br>Одни из лучших предложений в округе
+                            <strong>Соотношение цена/качество</strong><br>Одни из лучших предложений в округе
                         </span>
                     </div>
                 </div>
@@ -348,7 +345,7 @@
                     <div class="advantage-card">
                         <i class="icon icon-advantages-tree advantage-card__icon"></i>
                         <span class="advantage-card__text">
-                            <strong>хорошая экология</strong><br>В окрестностях расположено несколько парков
+                            <strong>Хорошая экология</strong><br>В окрестностях расположено несколько парков
                         </span>
                     </div>
                 </div>
@@ -388,6 +385,61 @@
                     class="default-gallery-slider__cover"
                     style="background-image: url({{asset('images/gallery/4.jpg')}});"
                 ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/5.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/6.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/7.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/8.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/9.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/10.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/11.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/12.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/13.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/14.jpg')}});"
+                ></div>
+
+                <div
+                    class="default-gallery-slider__cover"
+                    style="background-image: url({{asset('images/gallery/15.jpg')}});"
+                ></div>
             </div>
         </section>
     @endif
@@ -406,8 +458,8 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, улица Правды д. 26. <br>
-                            Бизнес-центр Северное Сияние.
+                            Москва, Ленинградский проспект д. 15. <br>
+                            Бизнес-центр Большевик.
                         </address>
                     </div>
                 </div>
@@ -434,7 +486,7 @@
         </div>
 
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af92b578cc9f2d013ee73d04b27e4274969c52705b71441a937197deb8766bfbe&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae23a69aa7fdd01aa1050f1dd2e7937b360fdf305eae8176cce770f4406d8bf58&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">
@@ -510,35 +562,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Современный БЦ рядом с ТТК</h2>
+                    <h2>Лофт-офисы в Москве в пределах ТТК</h2>
                 </div>
             </div>
             <div class="row open-hidden-text-wrapper open-hidden-text-wrapper_JS">
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        Из общей площади комплекса – 37 тысяч кв.м, более 28 000 квадратов занимают офисные помещения. Вниманию арендаторов предлагаются коммерческие объекты смешанной и открытой планировки, которые полностью готовы к эксплуатации.
+                        «Большевик» – это крупный культурно-деловой комплекс, расположенный в Тверском районе Москвы по адресу Ленинградский проспект, дом 15, строение 1.
                     </p>
 
                     <p>
-                        Аренда офиса в БЦ Северное Сияние – возможность снять качественный офис в относительной близости от центра мегаполиса. Постоянный интерес со стороны арендаторов обеспечивается высокими техническими характеристиками здания и отличным соотношением цена/качество. Годовая арендная ставка фиксированная. Светлые просторные помещения дают возможность оптимальной организации внутреннего пространства.
+                        По международной классификации офисных зданий «Большевик» относится к классу «А». Данный комплекс обладает всеми необходимыми качествами, чтобы стать отличным выбором для Вас: выгодное месторасположение, престижность, качественное инженерно-техническое обеспечение, развитая инфраструктура. Реновация здания была произведена совсем недавно, в 2014 году. В процессе ее реализации были использованы качественные, экологически чистые материалы.
                     </p>
 
                     <p>
-                        Преимущества аренда офиса в БЦ Северное Сияние очевидны. Комплекс оборудован девятью вместительными высокоскоростными лифтами известной компании. Сотрудники компаний арендаторов имеют возможность пользоваться охраняемым подземным двухуровневым паркингом, в который можно попасть прямо из здания. Имеется и наземная парковка, машиноместа арендуются заранее.
+                        БЦ «Большевик» имеет такие награды, как MUF'17 Community Awards, Best Office Awards 2017, The Moscow Times Awards 2015, что в очередной раз свидетельствует о высоком уровне его престижности.
                     </p>
                 </div>
 
                 <div class="col-md-6 col-sm-6">
                     <p>
-                        Реконструкция здания, проведенная в 2006 году, позволила повысить качественные характеристики помещений и отнести его к более высокому классу А. Современные материалы и оборудование, строгие линии и формы, панорамное остекление фасада, роскошный нестандартный дизайн – все это выгодно отличает офисы в этом деловом центре от аналогичных предложений.
+                        В здании проведены все необходимые, современные инженерно-технические системы. Выгодное месторасположение обеспечивает высокую транспортную и пешую доступность. Ближайшая станция метро – «Белорусская» – располагается в 9 минутах ходьбы. Эффективная планировка этажей и офисное пространство в стиле «лофт» создают приятные условия для комфортной работы. Открытая планировка пространства и стильные интерьеры на территории исторического здания способствуют созданию хорошей рабочей, творческой атмосферы и повышению статуса компании в глазах клиентов и партнеров.
                     </p>
 
                     <p>
-                        Комфортную работу обеспечивают установленные в комплексе современные системы видеонаблюдения, кондиционирования, вентиляции, пожаротушения. Имеется централизованное отопление. Безопасность на высоте, организована круглосуточная охрана, поддержанием порядка занимается специальная компания. Ее сотрудники проводят мониторинг объектов путем видеонаблюдения, имеется система контроля доступа, установлена охранная сигнализация. Территория комплекса огорожена.
-                    </p>
-
-                    <p>
-                        Бизнес-центр Северное Сияние – прекрасный выбор для ведения успешного бизнеса в комфортных условиях!
+                        Стоимость аренды помещений в бизнес-центре «Большевик» соответствует уровню предоставляемых услуг. Аренда или покупка офиса в таком здании станет отличным выбором для тех компаний, которые находятся в поиске офиса в Тверском районе и высоко ценят престиж и комфорт.
                     </p>
                 </div>
             </div>

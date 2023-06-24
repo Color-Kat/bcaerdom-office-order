@@ -6,8 +6,8 @@
 
     <title>@yield('title')</title>
 
-    <meta name="description" content="Аренда и продажа офисов класса А в БЦ Северное Сияние на Севере Москвы.">
-    <meta name="keywords" content="бц Северное Сияние, офис в Беговом районе">
+    <meta name="description" content="Аренда и продажа офисов класса А в БЦ Большевик на Севере Москвы.">
+    <meta name="keywords" content="бц Большевик, офис в Беговом районе">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>
@@ -251,14 +251,9 @@
     }
 </style>
 
-{{--<script src="/public/js/jquery.js"></script>--}}
-{{--<script src="/public/js/slick.min.js"></script>--}}
-{{--<script src="/public/js/main.js"></script>--}}
-
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/slick.min.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
-
 
 <script>
     const phoneInputs = document.querySelectorAll('.phone-mask');
