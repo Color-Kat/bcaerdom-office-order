@@ -29,8 +29,9 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, 4062-й Проектируемый проезд, 6, стр. 16. <br>
-                            Бизнес-центр Port Plaza.
+                            Москва, улица Викторенко д. 5 cтр. 1. <br>
+                            Бизнес-центр Victory Plaza.
+                        </address>
                     </div>
                 </div>
 
@@ -57,7 +58,7 @@
 
         {{--    Map    --}}
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad2962035a81b5ae0ef2a5f0c38ce19dd69a9723853a194fe346098f7b084bac8&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3033bbf626f5176d65731b1e992ab0734709c4c11cbdde99e5f37812c331c233&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">

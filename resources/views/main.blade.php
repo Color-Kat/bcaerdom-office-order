@@ -6,8 +6,8 @@
 
     <title>@yield('title')</title>
 
-    <meta name="description" content="Аренда и продажа офисов класса А в Port Plaza на Юге Москвы.">
-    <meta name="keywords" content="бц Порт Плаза, офис в Даниловском районе">
+    <meta name="description" content="Аренда и продажа офисов класса А в Victory Plaza на Севере Москвы. Данный бизнес-центр представляет собой 20-этажное здание с уникальной архитектурой.">
+    <meta name="keywords" content="бц Виктори Плаза, офис в Хорошевском районе">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>
