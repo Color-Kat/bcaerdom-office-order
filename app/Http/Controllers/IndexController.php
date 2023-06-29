@@ -396,7 +396,7 @@ class IndexController extends Controller
             $data = $request->validate([
                 'areaMin' => 'nullable',
                 'areaMax' => 'required',
-                'isActive' => 'required',
+                'isActive' => '',
                 'crmId' => 'required',
                 'type_id' => 'required',
                 'floor' => 'required',
@@ -595,9 +595,12 @@ class IndexController extends Controller
         $crmId = $request->crmId;
         $typedeal = $request->typedeal;
 
-        $commentAdditionalData = "\n\nofficeCrmId: $crmId, \nofficeSpace: $area, \ntypeDeal: $typedeal.";
+//        $commentAdditionalData = "Сайт: $site\nID в CRM: $crmId, \nПлощадь: $area, \nТип сделки: $typedeal.";
+        $commentAdditionalData = "Сайт: $site";
 
-        $comment = $request->comment . $commentAdditionalData;
+        $comment = $request->comment
+                ? "Сообщение: \n" . $request->comment . "\n\n$commentAdditionalData"
+                : $commentAdditionalData;
 
         if ($area == 0) {
             $roistatData = array(
@@ -609,10 +612,10 @@ class IndexController extends Controller
                 'phone' => $phone,
                 'comment' => $comment,
                 'fields' => array(
-                    'site' => $site,
-                    'officeCrmId' => '',
-                    'officeSpace' => '',
-                    'typeDeal' => ''
+                    'Сайт' => $site,
+                    'ID в CRM' => '',
+                    'Площадь' => '',
+                    'Тип сделки' => ''
                 ),
             );
         } else {
@@ -625,14 +628,14 @@ class IndexController extends Controller
                 'phone' => $phone,
                 'comment' => $comment,
                 'fields' => array(
-                    'site' => $site,
-                    'officeCrmId' => $crmId,
-                    'officeSpace' => $area,
-                    'typeDeal' => $typedeal
+                    'Сайт' => $site,
+                    'ID в CRM' => $crmId,
+                    'Площадь' => $area,
+                    'Тип сделки' => $typedeal
                 ),
             );
         }
-        //print_r($roistatData);
+
         $suc = file_get_contents("https://cloud.roistat.com/integration/webhook?" . http_build_query($roistatData));
         return json_encode(['success' => 1]);
     }

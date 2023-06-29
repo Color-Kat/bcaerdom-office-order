@@ -210,7 +210,7 @@ $(function(){
 		//alert(form.attr('action'));
 
 		var name = document.getElementById('namesend').value;
-		var email = document.getElementById('emailsend').value;
+		var phone = document.getElementById('emailsend').value;
         var area =  $('.area').attr('value');
         var title = $('.popup-window_narrow h3').text();
         var crmId = $('.crmId').attr('value');
@@ -219,7 +219,7 @@ $(function(){
 		$.ajax({
 			type     : "GET",
 			url      : form.attr('action'),
-			data     : {name: name, email: email, area: area, title: title, crmId: crmId, typedeal: typedeal},
+			data     : {name: name, phone: phone, area: area, title: title, crmId: crmId, typedeal: typedeal},
 			success  : function(data){
 				console.log(data);
 				data = $.parseJSON(data);
