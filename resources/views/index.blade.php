@@ -484,10 +484,15 @@
                         <form
                             action="/ajax/send-mail"
                             method="get"
-                            onsubmit='return false'
+                            {{--   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     --}}
+                            {{--   Recaptcha library cant detect submit form name    --}}
+                            {{--   So we need to define current submit form by name  --}}
+                            onsubmit="currentForm = 'main';return false"
                             style="position: static"
                             id="formmain"
                         >
+                            @captcha()
+
                             <div class="contactsF-form-block__top-wrapper block" style="float: none">
                                 <input
                                     type="text"
@@ -531,7 +536,10 @@
 
                             <br/>
 
-                            <button class="blue-button">
+                            <button
+                                class="blue-button"
+                                type="submit"
+                            >
                                 Отправить<i class="icon icon-arrow-right-white"></i>
                             </button>
                         </form>

@@ -13,6 +13,7 @@ use App\Models\Sign;
 use App\Models\Gallery;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class IndexController extends Controller
 {
@@ -584,7 +585,20 @@ class IndexController extends Controller
 
     public function senadmail(Request $request)
     {
-//        $site = $_SERVER['HTTP_X_FORWARDED_PROTO'] . '://' . $_SERVER['HTTP_HOST'] . '/';
+
+//        $request->validate([
+//            'g-recaptcha-response' => 'required|captcha'
+//        ]);
+
+        $validator = Validator::make($request->all(), [
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
+
+        if ($validator->fails()) {
+            return json_encode(['success' => 0, 'fail' => 'Вы не прошли проверку на бота!', 'data' => $validator->errors()]);
+        }
+
+        // $site = $_SERVER['HTTP_X_FORWARDED_PROTO'] . '://' . $_SERVER['HTTP_HOST'] . '/';
         $site = 'http' . '://' . $_SERVER['HTTP_HOST'] . '/';
 
         $name = $request->name;

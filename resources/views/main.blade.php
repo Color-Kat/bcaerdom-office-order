@@ -31,8 +31,11 @@
         })(window, document, 'script', 'cloud.roistat.com', '{{env('ROISTAT_SCRIPT_KEY')}}');
     </script>
     <!-- Roistat Counter End -->
+
 </head>
 <body>
+
+{{--<div id="g-recaptcha-response">{{env('INVISIBLE_RECAPTCHA_SITEKEY')}}</div>--}}
 
 <!-- HEADER -->
 <header class="header block">
@@ -203,7 +206,15 @@
             <h3>Заказать обратный<br>звонок</h3>
 
             <div class="modalcontent">
-                <form action="/ajax/send-mail" method="post">
+                <form
+                    action="/ajax/send-mail"
+                    method="post"
+                    {{--   Recaptcha library cant detect submit form name  --}}
+                    {{--   So we need to define current submit form by name  --}}
+                    onsubmit="currentForm = 'getCallPopup';return false"
+                >
+                    @captcha()
+
                     <input
                         type="text"
                         name="name"
@@ -230,7 +241,8 @@
                         Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
                     </div>
                     <br/>
-                    <button class="blue-button">Отправить<i class="icon icon-arrow-right-white"></i>
+                    <button class="blue-button" type="submit">
+                        Отправить<i class="icon icon-arrow-right-white"></i>
                     </button>
                 </form>
             </div>
