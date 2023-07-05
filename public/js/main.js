@@ -202,74 +202,160 @@ $(function(){
 	});
 
 
-	// SUBMIT GET CALL POPUP
-	$('.get-call_JS form').submit(function(e){
-
-		e.preventDefault();
-		var form = $(this);
-		//alert(form.attr('action'));
-
-		var name = document.getElementById('namesend').value;
-		var email = document.getElementById('emailsend').value;
-        var area =  $('.area').attr('value');
-        var title = $('.popup-window_narrow h3').text();
-        var crmId = $('.crmId').attr('value');
-        var typedeal = $('.typedeal').attr('value');
-
-		$.ajax({
-			type     : "GET",
-			url      : form.attr('action'),
-			data     : {name: name, email: email, area: area, title: title, crmId: crmId, typedeal: typedeal},
-			success  : function(data){
-				console.log(data);
-				data = $.parseJSON(data);
-
-				if(data.success) {
-					$('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">Спасибо за обращение! В ближайшее время с Вами свяжется наш специалист.</p>');
-				}
-				if(data.fail) {
-					let errorsStr = data.fail.join('<br>');
-					$('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">'+errorsStr+'</p>');
-				}
-			},
-			error : function(data){
-				$('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">Ошибка отправки формы</p>');
-			}
-		});
-
-	});
-
-	// SUBMIT MAIN FORM
-	$('.contacts-form-block form').submit(function(e){
-	    e.preventDefault();
-	    var name = document.getElementById('mainname').value;
-	    var phone = document.getElementById('mainphone').value;
-	    var email = document.getElementById('mainemail').value;
-	    var comment = document.getElementById('maincomment').value;
-	    var title = 'Заявка на просмотр';
-		e.preventDefault();
-		let form = $(this);
-		//alert(form.attr('action'));
-		$.ajax({
-			type     : "GET",
-			url      : form.attr('action'),
-			data     : {name: name, email: email, phone: phone, comment: comment, title: title},
-			success  : function(data){
-				data = $.parseJSON(data);
-				$('.messages-popup_JS').fadeIn();
-				if(data.success) {
-					$('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">Спасибо за обращение! В ближайшее время с Вами свяжется наш специалист.</p>');
-				}
-				if(data.fail) {
-					let errorsStr = data.fail.join('<br>');
-					$('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">'+errorsStr+'</p>');
-				}
-			},
-			error : function(data){
-				$('.messages-popup_JS').fadeIn();
-				$('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">Ошибка отправки формы</p>');
-			}
-		});
-
-	});
+	// // SUBMIT GET CALL POPUP
+	// $('.get-call_JS form').submit(function(e){
+    //
+	// 	e.preventDefault();
+	// 	var form = $(this);
+	// 	//alert(form.attr('action'));
+    //
+	// 	var name = document.getElementById('namesend').value;
+	// 	var email = document.getElementById('emailsend').value;
+    //     var area =  $('.area').attr('value');
+    //     var title = $('.popup-window_narrow h3').text();
+    //     var crmId = $('.crmId').attr('value');
+    //     var typedeal = $('.typedeal').attr('value');
+    //
+	// 	$.ajax({
+	// 		type     : "GET",
+	// 		url      : form.attr('action'),
+	// 		data     : {name: name, email: email, area: area, title: title, crmId: crmId, typedeal: typedeal},
+	// 		success  : function(data){
+	// 			console.log(data);
+	// 			data = $.parseJSON(data);
+    //
+	// 			if(data.success) {
+	// 				$('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">Спасибо за обращение! В ближайшее время с Вами свяжется наш специалист.</p>');
+	// 			}
+	// 			if(data.fail) {
+	// 				let errorsStr = data.fail.join('<br>');
+	// 				$('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">'+errorsStr+'</p>');
+	// 			}
+	// 		},
+	// 		error : function(data){
+	// 			$('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">Ошибка отправки формы</p>');
+	// 		}
+	// 	});
+    //
+	// });
+    //
+	// // SUBMIT MAIN FORM
+	// $('.contacts-form-block form').submit(function(e){
+	//     e.preventDefault();
+	//     var name = document.getElementById('mainname').value;
+	//     var phone = document.getElementById('mainphone').value;
+	//     var email = document.getElementById('mainemail').value;
+	//     var comment = document.getElementById('maincomment').value;
+	//     var title = 'Заявка на просмотр';
+	// 	e.preventDefault();
+	// 	let form = $(this);
+	// 	//alert(form.attr('action'));
+	// 	$.ajax({
+	// 		type     : "GET",
+	// 		url      : form.attr('action'),
+	// 		data     : {name: name, email: email, phone: phone, comment: comment, title: title},
+	// 		success  : function(data){
+	// 			data = $.parseJSON(data);
+	// 			$('.messages-popup_JS').fadeIn();
+	// 			if(data.success) {
+	// 				$('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">Спасибо за обращение! В ближайшее время с Вами свяжется наш специалист.</p>');
+	// 			}
+	// 			if(data.fail) {
+	// 				let errorsStr = data.fail.join('<br>');
+	// 				$('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">'+errorsStr+'</p>');
+	// 			}
+	// 		},
+	// 		error : function(data){
+	// 			$('.messages-popup_JS').fadeIn();
+	// 			$('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">Ошибка отправки формы</p>');
+	// 		}
+	// 	});
+	// });
 });
+
+let currentForm = 'main';
+
+// SUBMIT MAIN FORM
+_submitEvent = function () {
+    if (currentForm == 'main') mainFormSubmit();
+    if (currentForm == 'getCallPopup') getCallPopupSubmit();
+};
+
+const mainFormSubmit = () => {
+    var name = document.getElementById('mainname').value;
+    var surname = document.getElementById('mainsurname').value;
+    var phone = document.getElementById('mainphone').value;
+    var email = document.getElementById('mainemail').value;
+    var comment = document.getElementById('maincomment').value;
+    var title = 'Заявка на просмотр';
+
+    $.ajax({
+        type: "GET",
+        url: '/ajax/send-mail',
+        data: {
+            name: name,
+            surname: surname,
+            email: email,
+            phone: phone,
+            comment: comment,
+            title: title,
+            'g-recaptcha-response': $("#g-recaptcha-response").val()
+        },
+        success: function (data) {
+            data = $.parseJSON(data);
+            $('.messages-popup_JS').fadeIn();
+            if (data.success) {
+                $('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">Спасибо за обращение! В ближайшее время с Вами свяжется наш специалист.</p>');
+            }
+            if (data.fail) {
+                let errorsStr = data.fail + '<br>';
+                $('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">' + errorsStr + '</p>');
+            }
+        },
+        error: function (data) {
+            $('.messages-popup_JS').fadeIn();
+            $('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">Ошибка отправки формы</p>');
+        }
+    });
+}
+
+const getCallPopupSubmit = () => {
+
+    var name = document.getElementById('namesend').value;
+    var surname = document.getElementById('surnamesend').value;
+    var email = document.getElementById('emailsend').value;
+    var area = $('.area').attr('value');
+    var title = $('.popup-window_narrow h3').text();
+    var crmId = $('.crmId').attr('value');
+    var typedeal = $('.typedeal').attr('value');
+
+    $.ajax({
+        type: "GET",
+        url: '/ajax/send-mail',
+        data: {
+            name: name,
+            surname: surname,
+            email: email,
+            area: area,
+            title: title,
+            crmId: crmId,
+            typedeal: typedeal,
+            'g-recaptcha-response': $("#g-recaptcha-response").val()
+        },
+        success: function (data) {
+            data = $.parseJSON(data);
+
+            if (data.success) {
+                $('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">Спасибо за обращение! В ближайшее время с Вами свяжется наш специалист.</p>');
+            }
+            if (data.fail) {
+                let errorsStr = data.fail + '<br>';
+                $('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">' + errorsStr + '</p>');
+            }
+        },
+        error: function (data) {
+            $('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">Ошибка отправки формы</p>');
+        }
+    });
+}
+

@@ -6,7 +6,8 @@
 
     <title>@yield('title')</title>
 
-    <meta name="description" content="Аренда и продажа офисов класса А в Victory Plaza на Севере Москвы. Данный бизнес-центр представляет собой 20-этажное здание с уникальной архитектурой.">
+    <meta name="description"
+          content="Аренда и продажа офисов класса А в Victory Plaza на Севере Москвы. Данный бизнес-центр представляет собой 20-этажное здание с уникальной архитектурой.">
     <meta name="keywords" content="бц Виктори Плаза, офис в Хорошевском районе">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
@@ -51,7 +52,7 @@
                         <br>
                         <span>{{env('SETTINGS_BC_NAME')}}</span>
                     </div>
-{{--                    <span class="logo__text">Современный<br>комплекс класса А</span>--}}
+                    {{--                    <span class="logo__text">Современный<br>комплекс класса А</span>--}}
                 </a>
             </div>
             <div class="col-md-7 col-sm-1">
@@ -107,7 +108,7 @@
                         <br>
                         <span>{{env('SETTINGS_BC_NAME')}}</span>
                     </div>
-{{--                    <span class="logo__text">Современный<br>комплекс класса А</span>--}}
+                    {{--                    <span class="logo__text">Современный<br>комплекс класса А</span>--}}
                 </a>
             </div>
             <div class="col-md-7 col-sm-2">
@@ -150,7 +151,9 @@
         <div class="row">
 
             <div class="col-12" style="color: #aaaaaa; padding: 16px 15px">
-                Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.
+                Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни
+                при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского
+                кодекса РФ.
             </div>
 
             <div class="col-md-12">
@@ -203,13 +206,31 @@
             <h3>Заказать обратный<br>звонок</h3>
 
             <div class="modalcontent">
-                <form action="/ajax/send-mail" method="post">
+                <form
+                    action="/ajax/send-mail"
+                    method="post"
+                    {{--   Recaptcha library cant detect submit form name  --}}
+                    {{--   So we need to define current submit form by name  --}}
+                    onsubmit="currentForm = 'getCallPopup';return false"
+                >
+                    @captcha()
+
                     <input
                         type="text"
                         name="name"
                         class="default-input"
                         id="namesend"
                         placeholder="Имя"
+                        required="required"
+                    >
+
+                    <input
+                        type="text"
+                        name="surname"
+                        class="default-input hidden"
+                        id="surnamesend"
+                        placeholder="Фамилия"
+                        value="not_bot"
                         required="required"
                     >
 
@@ -227,10 +248,13 @@
 
                     <div>
                         <input type="checkbox" required>
-                        Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
+                        Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки персональных
+                            данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
                     </div>
                     <br/>
-                    <button class="blue-button">Отправить<i class="icon icon-arrow-right-white"></i>
+
+                    <button class="blue-button" type="submit">
+                        Отправить<i class="icon icon-arrow-right-white"></i>
                     </button>
                 </form>
             </div>
