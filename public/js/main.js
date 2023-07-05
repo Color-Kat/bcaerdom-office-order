@@ -292,6 +292,7 @@ _submitEvent = function () {
 
 const mainFormSubmit = () => {
     var name = document.getElementById('mainname').value;
+    var surname = document.getElementById('mainsurname').value;
     var phone = document.getElementById('mainphone').value;
     var email = document.getElementById('mainemail').value;
     var comment = document.getElementById('maincomment').value;
@@ -302,6 +303,7 @@ const mainFormSubmit = () => {
         url: '/ajax/send-mail',
         data: {
             name: name,
+            surname: surname,
             email: email,
             phone: phone,
             comment: comment,
@@ -329,6 +331,7 @@ const mainFormSubmit = () => {
 const getCallPopupSubmit = () => {
 
     var name = document.getElementById('namesend').value;
+    var surname = document.getElementById('surnamesend').value;
     var email = document.getElementById('emailsend').value;
     var area = $('.area').attr('value');
     var title = $('.popup-window_narrow h3').text();
@@ -340,6 +343,7 @@ const getCallPopupSubmit = () => {
         url: '/ajax/send-mail',
         data: {
             name: name,
+            surname: surname,
             email: email,
             area: area,
             title: title,
