@@ -594,6 +594,7 @@ class IndexController extends Controller
             'g-recaptcha-response' => 'required|captcha'
         ]);
 
+        // Checking for bot
         if ($validator->fails() || $request->get('surname') !== 'not_bot') {
             return json_encode(['success' => 0, 'fail' => 'Вы не прошли проверку на бота!', 'data' => $validator->errors()]);
         }
