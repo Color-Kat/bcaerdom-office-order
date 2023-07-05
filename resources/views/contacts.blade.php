@@ -86,6 +86,16 @@
 
                                 <input
                                     type="text"
+                                    name="surname"
+                                    class="default-input hidden"
+                                    id="mainsurname"
+                                    placeholder="Фамилия"
+                                    value="not_bot"
+                                    required="required"
+                                >
+
+                                <input
+                                    type="text"
                                     name="telephon"
                                     class="default-input phone-mask"
                                     id="mainphone"
