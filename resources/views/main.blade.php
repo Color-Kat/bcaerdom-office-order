@@ -31,8 +31,11 @@
         })(window, document, 'script', 'cloud.roistat.com', '{{env('ROISTAT_SCRIPT_KEY')}}');
     </script>
     <!-- Roistat Counter End -->
+
 </head>
 <body>
+
+{{--<div id="g-recaptcha-response">{{env('INVISIBLE_RECAPTCHA_SITEKEY')}}</div>--}}
 
 <!-- HEADER -->
 <header class="header block">
@@ -153,19 +156,23 @@
             </div>
 
             <div class="col-md-12">
-                <nav class="navigation navigation_footer" style="padding-top: 0">
-                    <ul class="header-menu">
-                        <li class="header-menu__link">
-                            <a href="/politica">Политика обработки персональных данных</a>
+                <nav class="navigation_footer" style="padding-top: 24px">
+                    <ul class="header-menu" style="gap: 8px; display: flex; flex-wrap: wrap">
+                        <li class="header-menu__link text-center">
+                            <a href="/politica">Согласие на обработку персональных данных</a>
                         </li>
 
-                        <li class="header-menu__link">
+                        <li class="header-menu__link text-center">
                             <a href="/usersogl">Пользовательское соглашение</a>
+                        </li>
+
+                        <li class="header-menu__link text-center">
+                            <a href="/privacy-policy">Политика конфиденциальности</a>
                         </li>
                     </ul>
                 </nav>
 
-                <p class="footer__copy">© 2023 БЦ Башня Федерация. Все права защищены</p>
+                <p class="footer__copy">© 2023 БЦ Алкон. Все права защищены</p>
 
                 <div id="counter">
                 </div>
@@ -202,13 +209,31 @@
             <h3>Заказать обратный<br>звонок</h3>
 
             <div class="modalcontent">
-                <form action="/ajax/send-mail" method="post">
+                <form
+                    action="/ajax/send-mail"
+                    method="post"
+                    {{--   Recaptcha library cant detect submit form name  --}}
+                    {{--   So we need to define current submit form by name  --}}
+                    onsubmit="currentForm = 'getCallPopup';return false"
+                >
+                    @captcha()
+
                     <input
                         type="text"
                         name="name"
                         class="default-input"
                         id="namesend"
                         placeholder="Имя"
+                        required="required"
+                    >
+
+                    <input
+                        type="text"
+                        name="surname"
+                        class="default-input hidden"
+                        id="surnamesend"
+                        placeholder="Фамилия"
+                        value="not_bot"
                         required="required"
                     >
 
@@ -229,7 +254,8 @@
                         Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
                     </div>
                     <br/>
-                    <button class="blue-button">Отправить<i class="icon icon-arrow-right-white"></i>
+                    <button class="blue-button" type="submit">
+                        Отправить<i class="icon icon-arrow-right-white"></i>
                     </button>
                 </form>
             </div>
@@ -249,10 +275,6 @@
         clear: both;
     }
 </style>
-
-{{--<script src="/public/js/jquery.js"></script>--}}
-{{--<script src="/public/js/slick.min.js"></script>--}}
-{{--<script src="/public/js/main.js"></script>--}}
 
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/slick.min.js')}}"></script>

@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Описание БЦ Башня Федерация. Инфраструктура, компании-арендаторы в Башне Федерация')
+@section('title', "Аренда офиса {$data->areaMax} м2 в бизнес-центре Башня Федерация")
 @section('content')
     <div class="default-page block">
         <div class="container">
@@ -63,7 +63,7 @@
             <div class="popup-window__slider default-gallery-slider default-gallery-slider_JS">
                 @foreach($gals as $g)
                     <div class="default-gallery-slider__cover"
-                         style="background-image: url('/public/images/gallery/{{$g->image}}')"></div>
+                         style="background-image: url('/images/gallery/{{$g->image}}')"></div>
                 @endforeach
             </div>
             <div class="container">

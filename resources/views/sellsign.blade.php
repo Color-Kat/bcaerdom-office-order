@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Описание БЦ Башня Федерация. Инфраструктура, компании-арендаторы в Башне Федерация')
+@section('title', "Продажа офиса {$data->areaMax} м2 в бизнес-центре Башня Федерация")
 @section('content')
     <div class="default-page block">
         <div class="container">
