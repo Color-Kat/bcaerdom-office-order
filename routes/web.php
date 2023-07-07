@@ -22,10 +22,12 @@ Route::get('/del',  [IndexController::class, 'deletegallery'])->name('deletegall
 Route::get('/sale',  [IndexController::class, 'sale'])->name('sale');
 Route::get('/about',  [IndexController::class, 'about'])->name('about');
 Route::get('/contacts',  [IndexController::class, 'contacts'])->name('contacts');
-Route::get('/politica',  [IndexController::class, 'politika'])->name('politika');
-Route::get('/usersogl',  [IndexController::class, 'usersogl'])->name('usersogl');
 Route::get('/gallery',  [IndexController::class, 'gallery'])->name('gallery');
 Route::post('/gallery',  [IndexController::class, 'gallery'])->name('gallery');
+
+Route::get('/politica',  [IndexController::class, 'politika'])->name('politika');
+Route::get('/usersogl',  [IndexController::class, 'usersogl'])->name('usersogl');
+Route::get('/privacy-policy',  [IndexController::class, 'privacyPolicy'])->name('usersogl');
 
 Route::get('/myprofile',  [IndexController::class, 'myprofile'])->name('myprofile');
 Route::post('/myprofile',  [IndexController::class, 'myprofile'])->name('myprofile');
