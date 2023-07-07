@@ -298,6 +298,9 @@ const mainFormSubmit = () => {
     var comment = document.getElementById('maincomment').value;
     var title = 'Заявка на просмотр';
 
+    /* ----- Loading button ----- */
+    $('.loading-button').text('Загрузка');
+
     $.ajax({
         type: "GET",
         url: '/ajax/send-mail',
@@ -313,6 +316,9 @@ const mainFormSubmit = () => {
         success: function (data) {
             data = $.parseJSON(data);
             $('.messages-popup_JS').fadeIn();
+
+            $('.loading-button').html('Отправить<i class="icon icon-arrow-right-white"></i>');
+
             if (data.success) {
                 $('.messages-popup_JS .modalcontent').html('<p class="answerOnrequest text-center">Спасибо за обращение! В ближайшее время с Вами свяжется наш специалист.</p>');
             }
@@ -332,7 +338,7 @@ const getCallPopupSubmit = () => {
 
     var name = document.getElementById('namesend').value;
     var surname = document.getElementById('surnamesend').value;
-    var email = document.getElementById('emailsend').value;
+    var phone = document.getElementById('phonesend').value;
     var area = $('.area').attr('value');
     var title = $('.popup-window_narrow h3').text();
     var crmId = $('.crmId').attr('value');
@@ -344,7 +350,7 @@ const getCallPopupSubmit = () => {
         data: {
             name: name,
             surname: surname,
-            email: email,
+            phone: phone,
             area: area,
             title: title,
             crmId: crmId,

@@ -119,12 +119,17 @@
                                 placeholder="Сообщение"
                             ></textarea>
 
-                            <div>
+                            <div class="text-left">
                                 <input type="checkbox" required>
-                                Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки
-                                    персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
+                                Отправляя свои данные, я соглашаюсь с <a href="/usersogl">Пользовательским соглашением</a> и <a href="/privacy-policy">Политикой конфиденциальности</a>
                             </div>
                             <br/>
+                            <div class="text-left">
+                                <input type="checkbox" required>
+                                Даю согласие на <a href="/politica">Обработку персональных данных</a>
+                            </div>
+                            <br/>
+
                             <button class="blue-button">
                                 Отправить<i class="icon icon-arrow-right-white"></i>
                             </button>

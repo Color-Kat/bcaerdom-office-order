@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NewCallRequestMail;
 use App\Models\Promises;
 use App\Models\Tax;
 use App\Models\Type;
@@ -13,6 +14,7 @@ use App\Models\Sign;
 use App\Models\Gallery;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class IndexController extends Controller
@@ -37,6 +39,14 @@ class IndexController extends Controller
         $sign_1 = Sign::where('id', 2)->first();
 
         return view('usersogl', compact('sign', 'sign_1'));
+    }
+
+    public function privacyPolicy()
+    {
+        $sign = Sign::where('id', 1)->first();
+        $sign_1 = Sign::where('id', 2)->first();
+
+        return view('privacy-policy', compact('sign', 'sign_1'));
     }
 
     public function index(Request $request)
@@ -80,7 +90,7 @@ class IndexController extends Controller
                         <div class="col-md-12">
                             <span class="popup-window__headline">';
 
-        if ($data['id_typedeal'] == 1)  $str .= 'Аренда офиса ';
+        if ($data['id_typedeal'] == 1) $str .= 'Аренда офиса ';
         else $str .= 'Продажа офиса ';
 
         if (isset($data['areaMin']) && isset($data['areaMax']))
@@ -397,7 +407,7 @@ class IndexController extends Controller
             $data = $request->validate([
                 'areaMin' => 'nullable',
                 'areaMax' => 'required',
-                'isActive' => 'required',
+                'isActive' => '',
                 'crmId' => 'required',
                 'type_id' => 'required',
                 'floor' => 'required',
@@ -528,7 +538,7 @@ class IndexController extends Controller
 
         $data = Promises::Leftjoin("tax", "tax.id_tax", "premises.id_tax")->where('premises.crmId', $id)->first();
 
-        if(!$data) abort(404);
+        if (!$data) abort(404);
 
         $gals = Gallery::where('id_premises', $data->id)->get();
 
@@ -604,51 +614,44 @@ class IndexController extends Controller
 
         $name = $request->name;
         $email = $request->email;
-        $area = $request->area;
         $title = $request->title . ' - ' . $site;
         $phone = $request->phone;
+        $area = $request->area;
         $crmId = $request->crmId;
         $typedeal = $request->typedeal;
 
         $commentAdditionalData = "\n\nofficeCrmId: $crmId, \nofficeSpace: $area, \ntypeDeal: $typedeal.";
 
-        $comment = $request->comment . $commentAdditionalData;
+        $comment = "Сообщение: \n" . $request->comment . $commentAdditionalData;
 
-        if ($area == 0) {
-            $roistatData = array(
+        $data = [
+            'site' => $site,
+            'title' => $title,
+            'email' => $email,
+            'name' => $name,
+            'phone' => $phone,
+            'comment' => $comment, // For Roistat
+            'message' => $request->comment, // For email
+            'fields' => array(
+                'site' => $site,
+                'officeCrmId' => $crmId ?? '',
+                'officeSpace' => $area ?? '',
+                'typeDeal' => $typedeal ?? ''
+            ),
+        ];
+
+        // Send mail
+        Mail::to('lead@of.ru')->send(new NewCallRequestMail($data));
+
+        $roistatData = array_merge(
+            [
                 'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
-                'key' => env('ROISTAT_SERVER_KEY'),
-                'title' => $title,
-                'email' => $email,
-                'name' => $name,
-                'phone' => $phone,
-                'comment' => $comment,
-                'fields' => array(
-                    'site' => $site,
-                    'officeCrmId' => '',
-                    'officeSpace' => '',
-                    'typeDeal' => ''
-                ),
-            );
-        } else {
-            $roistatData = array(
-                'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
-                'key' => env('ROISTAT_SERVER_KEY'),
-                'title' => $title,
-                'email' => $email,
-                'name' => $name,
-                'phone' => $phone,
-                'comment' => $comment,
-                'fields' => array(
-                    'site' => $site,
-                    'officeCrmId' => $crmId,
-                    'officeSpace' => $area,
-                    'typeDeal' => $typedeal
-                ),
-            );
-        }
-        //print_r($roistatData);
-        $suc = file_get_contents("https://cloud.roistat.com/integration/webhook?" . http_build_query($roistatData));
+                'key' => env('ROISTAT_SERVER_KEY')
+            ],
+            $data
+        );
+
+        $result = file_get_contents("https://cloud.roistat.com/integration/webhook?" . http_build_query($roistatData));
         return json_encode(['success' => 1]);
     }
 }

@@ -157,14 +157,18 @@
             </div>
 
             <div class="col-md-12">
-                <nav class="navigation navigation_footer" style="padding-top: 0">
-                    <ul class="header-menu">
-                        <li class="header-menu__link">
-                            <a href="/politica">Политика обработки персональных данных</a>
+                <nav class="navigation_footer" style="padding-top: 24px">
+                    <ul class="header-menu" style="gap: 8px; display: flex; flex-wrap: wrap">
+                        <li class="header-menu__link text-center">
+                            <a href="/politica">Согласие на обработку персональных данных</a>
                         </li>
 
-                        <li class="header-menu__link">
+                        <li class="header-menu__link text-center">
                             <a href="/usersogl">Пользовательское соглашение</a>
+                        </li>
+
+                        <li class="header-menu__link text-center">
+                            <a href="/privacy-policy">Политика конфиденциальности</a>
                         </li>
                     </ul>
                 </nav>
@@ -237,7 +241,7 @@
                     <input
                         type="text" name="telephon"
                         class="default-input phone-mask"
-                        id="emailsend"
+                        id="phonesend"
                         placeholder="Телефон"
                         required="required"
                     >
@@ -246,9 +250,14 @@
                     <input type="hidden" name='crmId' value='0' class="crmId"/>
                     <input type="hidden" name='typedeal' value='0' class="typedeal"/>
 
-                    <div>
+                    <div class="text-left">
                         <input type="checkbox" required>
-                        Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
+                        Отправляя свои данные, я соглашаюсь с <a href="/usersogl">Пользовательским соглашением</a> и <a href="/privacy-policy">Политикой конфиденциальности</a>
+                    </div>
+                    <br/>
+                    <div class="text-left">
+                        <input type="checkbox" required>
+                        Даю согласие на <a href="/politica">Обработку персональных данных</a>
                     </div>
                     <br/>
                     <button class="blue-button" type="submit">
@@ -283,12 +292,15 @@
 
 
 <script>
+    /* ----- Phone mask ----- */
     const phoneInputs = document.querySelectorAll('.phone-mask');
     const maskOptions = {
         mask: '+{7} (000) 000-00-00'
     };
 
     phoneInputs.forEach((input) => IMask(input, maskOptions));
+    /* ----- Phone mask ----- */
+
 </script>
 
 </body>
