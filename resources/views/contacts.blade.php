@@ -69,7 +69,13 @@
                 <div class="col-md-8">
                     <div class="contacts-form-block block">
                         <span class="contacts-form-block__title">Оставить заявку на просмотр</span>
-                        <form action="/ajax/send-mail" method="get" onsubmit="return false">
+                        <form
+                            action="/ajax/send-mail"
+                            method="get"
+                            onsubmit="currentForm = 'main';return false"
+                        >
+                            @captcha()
+
                             <div class="contacts-form-block__top-wrapper block" style="float: none">
                                 <input
                                     type="text"
@@ -77,6 +83,16 @@
                                     class="default-input"
                                     id="mainname"
                                     placeholder="Имя"
+                                    required="required"
+                                >
+
+                                <input
+                                    type="text"
+                                    name="surname"
+                                    class="default-input hidden"
+                                    id="mainsurname"
+                                    placeholder="Фамилия"
+                                    value="not_bot"
                                     required="required"
                                 >
 
