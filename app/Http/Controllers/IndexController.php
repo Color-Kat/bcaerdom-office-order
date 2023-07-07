@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NewCallRequestMail;
 use App\Models\Promises;
 use App\Models\Tax;
 use App\Models\Type;
@@ -13,6 +14,8 @@ use App\Models\Sign;
 use App\Models\Gallery;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class IndexController extends Controller
 {
@@ -36,6 +39,14 @@ class IndexController extends Controller
         $sign_1 = Sign::where('id', 2)->first();
 
         return view('usersogl', compact('sign', 'sign_1'));
+    }
+
+    public function privacyPolicy()
+    {
+        $sign = Sign::where('id', 1)->first();
+        $sign_1 = Sign::where('id', 2)->first();
+
+        return view('privacy-policy', compact('sign', 'sign_1'));
     }
 
     public function index(Request $request)
@@ -79,7 +90,7 @@ class IndexController extends Controller
                         <div class="col-md-12">
                             <span class="popup-window__headline">';
 
-        if ($data['id_typedeal'] == 1)  $str .= 'Аренда офиса ';
+        if ($data['id_typedeal'] == 1) $str .= 'Аренда офиса ';
         else $str .= 'Продажа офиса ';
 
         if (isset($data['areaMin']) && isset($data['areaMax']))
@@ -91,7 +102,7 @@ class IndexController extends Controller
                             <div class="popup-window__slider default-gallery-slider default-gallery-slider_JS">';
 
         foreach ($images as $d) {
-            $str .= '<div class="default-gallery-slider__cover" style="background-image: url(public/images/gallery/' . $d->image . ');"></div>';
+            $str .= '<div class="default-gallery-slider__cover" style="background-image: url(images/gallery/' . $d->image . ');"></div>';
         }
 
         $str .= '</div>
@@ -396,7 +407,7 @@ class IndexController extends Controller
             $data = $request->validate([
                 'areaMin' => 'nullable',
                 'areaMax' => 'required',
-                'isActive' => 'required',
+                'isActive' => '',
                 'crmId' => 'required',
                 'type_id' => 'required',
                 'floor' => 'required',
@@ -527,7 +538,7 @@ class IndexController extends Controller
 
         $data = Promises::Leftjoin("tax", "tax.id_tax", "premises.id_tax")->where('premises.crmId', $id)->first();
 
-        if(!$data) abort(404);
+        if (!$data) abort(404);
 
         $gals = Gallery::where('id_premises', $data->id)->get();
 
@@ -584,51 +595,63 @@ class IndexController extends Controller
 
     public function senadmail(Request $request)
     {
+
+//        $request->validate([
+//            'g-recaptcha-response' => 'required|captcha'
+//        ]);
+
+        $validator = Validator::make($request->all(), [
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
+
+        // Checking for bot
+        if ($validator->fails() || $request->get('surname') !== 'not_bot') {
+            return json_encode(['success' => 0, 'fail' => 'Вы не прошли проверку на бота!', 'data' => $validator->errors()]);
+        }
+
+        // $site = $_SERVER['HTTP_X_FORWARDED_PROTO'] . '://' . $_SERVER['HTTP_HOST'] . '/';
+        $site = 'http' . '://' . $_SERVER['HTTP_HOST'] . '/';
+
         $name = $request->name;
         $email = $request->email;
-        $area = $request->area;
-        $title = $request->title;
-        $comment = $request->comment;
+        $title = $request->title . ' - ' . $site;
         $phone = $request->phone;
+        $area = $request->area;
         $crmId = $request->crmId;
         $typedeal = $request->typedeal;
 
-        $site = $_SERVER['HTTP_X_FORWARDED_PROTO'] . '://' . $_SERVER['HTTP_HOST'] . '/';
-        if ($area == 0) {
-            $roistatData = array(
+        $commentAdditionalData = "\n\nofficeCrmId: $crmId, \nofficeSpace: $area, \ntypeDeal: $typedeal.";
+
+        $comment = "Сообщение: \n" . $request->comment . $commentAdditionalData;
+
+        $data = [
+            'site' => $site,
+            'title' => $title,
+            'email' => $email,
+            'name' => $name,
+            'phone' => $phone,
+            'comment' => $comment, // For Roistat
+            'message' => $request->comment, // For email
+            'fields' => array(
+                'site' => $site,
+                'officeCrmId' => $crmId ?? '',
+                'officeSpace' => $area ?? '',
+                'typeDeal' => $typedeal ?? ''
+            ),
+        ];
+
+        // Send mail
+        Mail::to('lead@of.ru')->send(new NewCallRequestMail($data));
+
+        $roistatData = array_merge(
+            [
                 'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
-                'key' => '8fbb4bb921aa2a01544fff95303eb43e',
-                'title' => $title,
-                'email' => $email,
-                'name' => $name,
-                'phone' => $phone,
-                'comment' => $comment,
-                'fields' => array(
-                    'site' => $site,
-                    'officeCrmId' => '',
-                    'officeSpace' => '',
-                    'typeDeal' => ''
-                ),
-            );
-        } else {
-            $roistatData = array(
-                'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
-                'key' => '8fbb4bb921aa2a01544fff95303eb43e',
-                'title' => $title,
-                'email' => $email,
-                'name' => $name,
-                'phone' => $phone,
-                'comment' => $comment,
-                'fields' => array(
-                    'site' => $site,
-                    'officeCrmId' => $crmId,
-                    'officeSpace' => $area,
-                    'typeDeal' => $typedeal
-                ),
-            );
-        }
-        //print_r($roistatData);
-        $suc = file_get_contents("https://cloud.roistat.com/integration/webhook?" . http_build_query($roistatData));
+                'key' => '8fbb4bb921aa2a01544fff95303eb43e'
+            ],
+            $data
+        );
+
+        $result = file_get_contents("https://cloud.roistat.com/integration/webhook?" . http_build_query($roistatData));
         return json_encode(['success' => 1]);
     }
 }
