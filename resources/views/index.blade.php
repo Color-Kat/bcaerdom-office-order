@@ -369,7 +369,7 @@
                 </div>
             </div>
 
-            <div class="default-gallery-slider default-gallery-slider_JS">
+            <div class="default-gallery-slider default-gallery-without-bg default-gallery-slider_JS">
                 <div
                     class="default-gallery-slider__cover"
                     style="background-image: url({{asset('images/gallery/1.jpg')}});"
@@ -503,16 +503,31 @@
                         <form
                             action="/ajax/send-mail"
                             method="get"
-                            onsubmit='return false'
+                            {{--   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     --}}
+                            {{--   Recaptcha library cant detect submit form name    --}}
+                            {{--   So we need to define current submit form by name  --}}
+                            onsubmit="currentForm = 'main';return false"
                             style="position: static"
                             id="formmain"
                         >
-                            <div class="contactsF-form-block__top-wrapper block" style="float: none">
+                            @captcha()
+
+                            <div class="contacts-form-block__top-wrapper block" style="float: none">
                                 <input
                                     type="text"
                                     name="name"
                                     class="default-input"
                                     id="mainname" placeholder="Имя"
+                                    required="required"
+                                >
+
+                                <input
+                                    type="text"
+                                    name="surname"
+                                    class="default-input hidden"
+                                    id="mainsurname"
+                                    placeholder="Фамилия"
+                                    value="not_bot"
                                     required="required"
                                 >
 
@@ -542,15 +557,21 @@
                                 style="float: none"
                             ></textarea>
 
-                            <div>
+                            <div class="text-left">
                                 <input type="checkbox" required>
-                                Отправляя свои данные я соглашаюсь с <a href="/politica">Политикой обработки
-                                    персональных данных</a> и <a href="/usersogl">Пользовательским соглашением</a>
+                                Отправляя свои данные, я соглашаюсь с <a href="/usersogl">Пользовательским соглашением</a> и <a href="/privacy-policy">Политикой конфиденциальности</a>
                             </div>
-
+                            <br/>
+                            <div class="text-left">
+                                <input type="checkbox" required>
+                                Даю согласие на <a href="/politica">Обработку персональных данных</a>
+                            </div>
                             <br/>
 
-                            <button class="blue-button">
+                            <button
+                                class="blue-button loading-button"
+                                type="submit"
+                            >
                                 Отправить<i class="icon icon-arrow-right-white"></i>
                             </button>
                         </form>
