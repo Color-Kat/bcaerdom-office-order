@@ -335,10 +335,9 @@ const mainFormSubmit = () => {
 }
 
 const getCallPopupSubmit = () => {
-
-    var name = document.getElementById('namesend').value;
-    var surname = document.getElementById('surnamesend').value;
-    var phone = document.getElementById('phonesend').value;
+    var name = $('#namesend').val();
+    var surname = $('#surnamesend').val();
+    var phone = $('#phonesend').val();
     var area = $('.area').attr('value');
     var title = $('.popup-window_narrow h3').text();
     var crmId = $('.crmId').attr('value');
@@ -364,7 +363,8 @@ const getCallPopupSubmit = () => {
                 $('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">Спасибо за обращение! В ближайшее время с Вами свяжется наш специалист.</p>');
             }
             if (data.fail) {
-                let errorsStr = data.fail.join('<br>');
+                let errorsStr = typeof data.fail === 'string' ? data.fail : data.fail.join('<br>');
+
                 $('.get-call_JS .modalcontent').html('<p class="answerOnrequest text-center">' + errorsStr + '</p>');
             }
         },
