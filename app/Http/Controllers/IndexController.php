@@ -83,7 +83,7 @@ class IndexController extends Controller
             ->where("premises.crmId", $_GET["id"])
             ->first();
 
-        $images = Gallery::where('id_premises', $data['id'])->get();
+        $images = Gallery::where('id_premises', $data['id'] ?? "")->get();
 
         $str = '<div class="default-popup__aligner"><div class="container popup-window"><a href="#" class="popup-window__close popup-window__close_JS"><i class="icon icon-close"></i></a>
                     <div class="row">
@@ -645,13 +645,14 @@ class IndexController extends Controller
 
         $roistatData = array_merge(
             [
-                'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'nocookie',
+                'roistat' => $_COOKIE['roistat_visit'] ?? 'nocookie',
                 'key' => '8fbb4bb921aa2a01544fff95303eb43e'
             ],
             $data
         );
 
         $result = file_get_contents("https://cloud.roistat.com/integration/webhook?" . http_build_query($roistatData));
+
         return json_encode(['success' => 1]);
     }
 }
