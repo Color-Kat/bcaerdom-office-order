@@ -240,7 +240,7 @@
                     <input
                         type="text" name="telephon"
                         class="default-input phone-mask"
-                        id="emailsend"
+                        id="phonesend"
                         placeholder="Телефон"
                         required="required"
                     >
