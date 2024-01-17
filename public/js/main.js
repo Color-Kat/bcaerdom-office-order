@@ -52,7 +52,7 @@ $(function () {
                 jQuery(function ($) {
                     $('.rent-object-popup_JS').click(function (e) { // событие клика по веб-документу
                         var div = $(".rent-object-popup_JS .popup-window"); // тут указываем ID элемента
-                        $(".rent-object-popup_JS").unload();
+                        // $(".rent-object-popup_JS").unload();
                         if (!div.is(e.target) // если клик был не по нашему блоку
                             && div.has(e.target).length === 0) { // и не по его дочерним элементам
                             div.parent().parent().fadeOut(); // скрываем его
@@ -64,7 +64,7 @@ $(function () {
                 jQuery(function ($) {
                     $('.get-call_JS').click(function (e) { // событие клика по веб-документу
                         var div = $(".get-call_JS .popup-window"); // тут указываем ID элемента
-                        $(".get-call_JS").unload();
+                        // $(".get-call_JS").unload();
                         if (!div.is(e.target) // если клик был не по нашему блоку
                             && div.has(e.target).length === 0) { // и не по его дочерним элементам
                             div.parent().parent().fadeOut(); // скрываем его
@@ -262,6 +262,8 @@ const getCallPopupSubmit = () => {
     var title = $('.popup-window_narrow h3').text();
     var crmId = $('.crmId').attr('value');
     var typedeal = $('.typedeal').attr('value');
+
+    console.log(2134214214214214)
 
     $.ajax({
         type: "GET",

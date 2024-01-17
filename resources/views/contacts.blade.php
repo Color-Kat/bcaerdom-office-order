@@ -2,6 +2,8 @@
 @section('title', 'Контактная информация | Бизнес-центр Сильвер Сити')
 @section('content')
 
+{{--    74994900592 адрес ул Мантулинская, д 9 к 1, info@citypark-estate.ru, координаты в Яндексе: 55.755051, 37.544163--}}
+
     <!-- CONTACTS -->
     <section class="contacts-section default-page default-section_shadow-bottom block">
         <div class="container">
@@ -10,15 +12,15 @@
                     <ul class="bread-crumbs">
                         <li class="bread-crumbs__link" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                             <a itemprop="url" title="БЦ Сильвер Сити" href="/" class="">
-                                <span itemprop="title">БЦ Сильвер Сити</span>
+                                <span itemprop="title">БЦ CITY PARK</span>
                             </a>
                         </li>
                         <li class="bread-crumbs__link"> /</li>
                         <li class="bread-crumbs__link bread-crumbs__link_current">
-                            Контактная информация | Бизнес-центр Сильвер Сити
+                            Контактная информация | Бизнес-центр CITY PARK
                         </li>
                     </ul>
-                    <h1>Контакты бизнес-центра Сильвер Сити</h1>
+                    <h1>Контакты бизнес-центра CITY PARK</h1>
                 </div>
             </div>
 
@@ -29,8 +31,8 @@
                         <span class="default-single-contact-element__name">Адрес:</span>
                         <address class="default-single-contact-element__value">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Москва, Серебряническая набережная д. 29.</br>
-                            Бизнес-центр Сильвер Сити.
+                            Москва, ул Мантулинская, д 9 к 1.<br>
+                            Бизнес-центр CITY PARK.
                         </address>
                     </div>
                 </div>
@@ -58,7 +60,7 @@
 
         {{--    Map    --}}
         <div class="contacts-section__map" id="contacts-section__map_JS">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae60ff082c5aa43f88996d5f7d14be5dfe46878aab00b15d5689a742fab8589eb&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A31637b99672e9ba3f9d29636ae97cd74f82264c0a6c204eb68dacbc29883ac07&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="container">

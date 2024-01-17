@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2df547aedbb84b79aa90b8eee31df978",
+    "content-hash": "7be4fa68cb838e39c4237139b1b2f707",
     "packages": [
         {
             "name": "albertcht/invisible-recaptcha",
-            "version": "dev-multi-forms",
+            "version": "v1.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/albertcht/invisible-recaptcha.git",
-                "reference": "5f804292bf65476dfa174020064e32235d913e1b"
+                "reference": "12a4aec36c32e4c4b97884ff6cae97859eb69098"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/albertcht/invisible-recaptcha/zipball/5f804292bf65476dfa174020064e32235d913e1b",
-                "reference": "5f804292bf65476dfa174020064e32235d913e1b",
+                "url": "https://api.github.com/repos/albertcht/invisible-recaptcha/zipball/12a4aec36c32e4c4b97884ff6cae97859eb69098",
+                "reference": "12a4aec36c32e4c4b97884ff6cae97859eb69098",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.2|^7.0",
-                "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
-                "illuminate/view": "^5.0|^6.0|^7.0|^8.0",
+                "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0",
+                "illuminate/view": "^5.0|^6.0|^7.0|^8.0|^9.0",
                 "php": "^5.6.4 || ^7.0 || ^8.0"
             },
             "require-dev": {
@@ -65,9 +65,9 @@
             ],
             "support": {
                 "issues": "https://github.com/albertcht/invisible-recaptcha/issues",
-                "source": "https://github.com/albertcht/invisible-recaptcha/tree/multi-forms"
+                "source": "https://github.com/albertcht/invisible-recaptcha/tree/v1.9.7"
             },
-            "time": "2021-06-20T15:41:55+00:00"
+            "time": "2022-02-10T02:36:34+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -7445,14 +7445,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "albertcht/invisible-recaptcha": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

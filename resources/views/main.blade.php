@@ -6,8 +6,8 @@
 
     <title>@yield('title')</title>
 
-    <meta name="description" content="Снять офис в БЦ Сильвер Сити. Свободные площади в аренду в Бизенес-центре Сильвер Сити на Серебрянической набережной д. 29.">
-    <meta name="keywords" content="бц Сильвер Сити, аренда на набережной">
+    <meta name="description" content="Снять офис в БЦ Сити парк. Свободные площади в аренду в Бизенес-центре CITY PARK на ул Мантулинская, д 9 к 1.">
+    <meta name="keywords" content="бц Сити Парк, аренда на ул Мантулинская, бц CITY PARK">
 
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <script src="https://unpkg.com/imask"></script>
@@ -47,9 +47,9 @@
             <div class="col-md-3 col-sm-4 col-xs-12">
                 <a href="/" class="logo">
                     <div class="logo__left">
-                        <img src="{{asset('images/logo.png')}}" alt="БЦ {{env('SETTINGS_BC_NAME')}}">
+                        <img src="{{asset('images/logo.png')}}" alt="БЦ {{env('SETTINGS_BC_NAME')}}" height="30px">
                         <br>
-                        <span>{{env('SETTINGS_BC_NAME')}}</span>
+{{--                        <span>{{env('SETTINGS_BC_NAME')}}</span>--}}
                     </div>
                     <span class="logo__text">Современный<br>комплекс класса А</span>
                 </a>
@@ -73,9 +73,9 @@
                             </li>
                         @endif
 
-                        <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/about') header-menu__link_active @endif">
-                            <a href="/about" itemprop="url">О бизнес-центре</a>
-                        </li>
+{{--                        <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/about') header-menu__link_active @endif">--}}
+{{--                            <a href="/about" itemprop="url">О бизнес-центре</a>--}}
+{{--                        </li>--}}
 
                         <li class="header-menu__link @if ($_SERVER['REQUEST_URI'] == '/contacts') header-menu__link_active @endif">
                             <a href="/contacts" itemprop="url">Контакты</a>
@@ -83,6 +83,7 @@
                     </ul>
                 </nav>
             </div>
+
 
             <div class="col-md-2 col-sm-3 header__contacts">
                 <div class="small-contacts-block">
@@ -128,9 +129,9 @@
                             </li>
                         @endif
 
-                        <li class="header-menu__link">
-                            <a href="/about">О бизнес-центре</a>
-                        </li>
+{{--                        <li class="header-menu__link">--}}
+{{--                            <a href="/about">О бизнес-центре</a>--}}
+{{--                        </li>--}}
 
                         <li class="header-menu__link">
                             <a href="/contacts">Контакты</a>
@@ -169,7 +170,7 @@
                     </ul>
                 </nav>
 
-                <p class="footer__copy">© 2023 БЦ {{env('SETTINGS_BC_NAME')}}. Все права защищены</p>
+                <p class="footer__copy">© 2024 БЦ {{env('SETTINGS_BC_NAME')}}. Все права защищены</p>
 
                 <div id="counter">
                 </div>
