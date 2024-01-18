@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Продажа офисов в бизнес-центре Сильвер Сити')
+@section('title', 'Продажа офисов в бизнес-центре Сити Парк')
 @section('content')
 
     <!-- DEFAULT PAGE -->

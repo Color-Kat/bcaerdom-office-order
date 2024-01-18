@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Описание бизнес-центра Сильвер Сити. Инфраструктура, характеристики Silver City')
+@section('title', 'Описание бизнес-центра Сити Парк. Инфраструктура, характеристики CITY PARK')
 @section('content')
     <!-- DEFAULT PAGE -->
     <div class="default-page block">

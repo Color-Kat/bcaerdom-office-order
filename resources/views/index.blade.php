@@ -519,7 +519,7 @@
                             style="position: static"
                             id="formmain"
                         >
-{{--                            @captcha()--}}
+                            @captcha()
 
                             <div class="contacts-form-block__top-wrapper block" style="float: none">
                                 <input

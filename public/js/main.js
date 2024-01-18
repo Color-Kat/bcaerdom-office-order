@@ -263,8 +263,6 @@ const getCallPopupSubmit = () => {
     var crmId = $('.crmId').attr('value');
     var typedeal = $('.typedeal').attr('value');
 
-    console.log(2134214214214214)
-
     $.ajax({
         type: "GET",
         url: '/ajax/send-mail',
