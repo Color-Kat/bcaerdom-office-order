@@ -67,7 +67,7 @@
     <nav id="sidebar" class="">
         <div class="sidebar-header">
             <a href="index.html">
-                <img class="main-logo" src="public/images/logo.png" alt=""/>
+                <img class="main-logo" src="public/images/logo.png" alt="" style="width: 100px;"/>
             </a>
             <strong><img src="public/images/logo.png" alt=""/></strong>
         </div>
@@ -113,7 +113,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="logo-pro">
-                    <a href="index.html"><img class="main-logo" src="public/images/logo.png" alt=""/></a>
+                    <a href="index.html"><img class="main-logo" src="public/images/logo.png" alt="" style="height: 48px;"/></a>
                 </div>
             </div>
         </div>
