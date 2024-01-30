@@ -104,9 +104,13 @@
             <div class="col-md-3 col-sm-5">
                 <a href="#" class="logo logo_white">
                     <div class="logo__left">
-                        <img src="{{asset('images/logo-white.png')}}" alt="Бизнес-центр {{env('SETTINGS_BC_NAME')}}">
+                        <img
+                            src="{{asset('images/logo-white.png')}}"
+                            alt="Бизнес-центр {{env('SETTINGS_BC_NAME')}}"
+                            style="height: 30px"
+                        >
                         <br>
-                        <span>{{env('SETTINGS_BC_NAME')}}</span>
+                        <br>
                     </div>
                     <span class="logo__text">Современный жилой комплекс</span>
                 </a>
